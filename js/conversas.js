@@ -306,8 +306,10 @@ function pergunta_7(){
 
         if(val == 'Design')
           pergunta_8();
-        else
-          alert('Esta página ainda está sendo desenvolvida');
+        else if(val == 'Web')
+          pergunta_9();
+        else if(val == 'Outro')
+            abrir_solicitacao('Outro');
 
     });
 }
@@ -344,15 +346,47 @@ function pergunta_8(){
     });
 }
 
+function pergunta_9(){
+
+    var frase = 'Web? Tá brincando? Veio ao lugar certo. Essa é nossa especialidade! :)'
+        + '<br><br>'
+        + 'Nos conte, o quê, especificamente, precisa:'
+
+    var itens_array = [
+        'Site',
+        'Hotsite',
+        'Manutenção (já tenho site)',
+        'Post (Facebook, Instagram, etc)',
+        'E-mail Marketing',
+        'Hospedagem',
+        'E-mail Corporativo',
+        'Assinatura de E-mail',
+        'Consultoria de Marketing',
+        'Social Manager',
+        'Aplicativo pra Celular',
+        'Jogos'
+    ]
+    var options = {
+        index : itens_array,
+        item: itens_array
+    };
+
+    conversa([frase], 'question',options, function(val){
+
+        abrir_solicitacao(val);
+
+    });
+}
+
 function abrir_solicitacao(servico){
 
     var frase = 'Ok, já entendi. '
         + '<br>'
         + 'Anote aí o número do seu pedido <strong>#0001</strong>.'
         + '<br>'
-        + 'Fique tranquilo que já enviamos um e-mail pra você contendo esse número também. :)'
+        + 'Fique tranquilo que já enviamos um e-mail pra você com esse número também. :)'
         + '<br><br>'
-        + 'Deixe eu explicar: esse é o número que você vai acompanhar sua solicitação e, também, que nossos atendentes utilizaram pra identificar você.'
+        + 'Deixe eu explicar: esse é o número que você vai acompanhar sua solicitação e, também, que nossos atendentes utilizarão pra identificar você.'
 
     var itens_array = [
         'Ver solicitação'
