@@ -1,0 +1,1 @@
+/* esse é um script geral do site */
