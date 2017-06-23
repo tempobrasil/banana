@@ -276,16 +276,11 @@ function redireciona_atendimento(){
     var frase = 'Tudo bem! Não é todo mundo que está preparado pra ser amigo de um robô.'
         + '<br><br>:\'('
         + '<br><br>'
-        + 'Clique no botão abaixo e você será redirecionado ao departamento de atendimento (pra falar com uma pessoa de verdade).'
+        + 'Vou abrir lá na parte debaixo dessa página, no lado direito, um botão pra você falar com "um humano". '
         + '<br><br>'
         + 'Grande abraço, ' + usuario_nome + '. Até mais! :)';
 
-    var options = {
-        index : ['S'],
-        item: ['Falar com um humano']
-    };
-
-    conversa([frase], 'question',options, function(){
+    conversa([frase], false,[], function(){
 
         //document.location.href = 'http://www.blog.tiago.art.br';
         iniciarChat('Não me dou bem com robôs. Prefiro falar com um humano igual a mim. :)');
