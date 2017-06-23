@@ -14,6 +14,7 @@ h4,
 h5 {
   font-family: 'Open Sans', sans-serif;
 }
+/* Controle de Imagens de Fundo */
 div#bgs > div {
   display: none;
   width: 100%;
@@ -36,4 +37,16 @@ div#bgs_dots {
   top: 0;
   position: fixed;
   z-index: -98;
+}
+/* <header> */
+header {
+  height: 250px;
+}
+header #logo {
+  max-width: 228px;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  margin: 50px auto;
+  display: none;
 }
