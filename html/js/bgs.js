@@ -39,7 +39,7 @@ function bgs_next(){
 
     if(next != bgs_current){
 
-        $('div#bgs > div').eq(bgs_current).fadeOut(bg_fade_speed, function(){
+        $('div#bgs > div').eq(bgs_current).fadeOut( (bg_fade_speed/2) , function(){
 
             $('div#bgs > div').eq(next).fadeIn(bg_fade_speed);
 

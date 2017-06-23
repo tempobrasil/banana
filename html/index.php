@@ -29,17 +29,23 @@
 <script src="bower_components/bootstrap-device-debug/bootstrap-device-debug.js"></script>
 <link rel="stylesheet" href="bower_components/bootstrap-device-debug/bootstrap-device-debug.css">
 
+<!-- BOWER - typed.js -->
+<script src="bower_components/typed.js/dist/typed.min.js"></script>
+
 <!-- Controle de acesso pelo Mobile -->
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
 <!-- Carrega CSS -->
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/conversas.css">
 
 <!-- Carrega JS -->
+<script src="js/functions.js"></script>
 <script src="js/base.js"></script>
 <script src="js/bgs.js"></script>
 <script src="js/header.js"></script>
+<script src="js/conversas.js"></script>
 </head>
 
 <body>
@@ -80,6 +86,25 @@
     </div>
   </div>
 </header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+      <div id="conversas">
+
+        <span class="digitar"></span>
+
+        <div class="resposta">
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
 
 </body>
 </html>

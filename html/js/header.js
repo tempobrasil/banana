@@ -13,9 +13,11 @@ function StartLogo(){
 
       $('#logo').animate({
           top: 0
-      }, 200);
+      }, 1000, 'easeOutBack', function(){
+          iniciar_conversa();
+      });
 
-  }, 1000, 'easeOutBack');
+  }, 1000);
 
 
 };
