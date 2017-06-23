@@ -8,6 +8,7 @@
 
 <!-- BOWER - jQuery -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/jquery.easing/js/jquery.easing.min.js"></script>
 
 <!-- BOWER - Bootstrap -->
 <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
@@ -43,11 +44,26 @@
 
 <body>
 
+<!-- Loading -->
+<div id="loading"></div>
+
 <!-- Controla imagens do fundo (início) -->
 <div id="bgs">
-  <div style="background-image: url(images/bgs/bg1.jpg);"></div>
-  <div style="background-image: url(images/bgs/bg2.jpg);"></div>
-  <div style="background-image: url(images/bgs/bg3.jpg);"></div>
+  <?
+  $bgs = array(
+    'images/bgs/bg1.jpg',
+    'images/bgs/bg2.jpg',
+    'images/bgs/bg3.jpg'
+  );
+
+  shuffle($bgs);
+
+  foreach($bgs as $bg) {
+    ?>
+    <div style="background-image: url(<?= $bg; ?>);"></div>
+  <?
+  }
+  ?>
 </div>
 <div id="bgs_dots"></div>
 <!-- Controla imagens do fundo (fim) -->

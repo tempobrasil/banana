@@ -1,4 +1,4 @@
-$(document).ready(function(){
+function StartLogo(){
 
   var logo_h = $('#logo').outerHeight(true);
   var logo_w = $('#logo').outerWidth(true);
@@ -13,9 +13,9 @@ $(document).ready(function(){
 
       $('#logo').animate({
           top: 0
-      }, 1000);
+      }, 200);
 
-  }, 1000);
+  }, 1000, 'easeOutBack');
 
 
-});
+};
