@@ -106,10 +106,10 @@ function pergunta_voltou(){
 
 function pergunta_voltou_nome(){
 
-    var frase = 'Caramba! Que bola fora que eu dei!  <br><br>:S<br>'
+    var frase = 'Caramba! Que bola fora que eu dei!  <br><br><i>#robôEnvergonhado</i><br><br>'
         +'Pensa num rôbo com as bochecas vermelhas? Esse sou eu!'
         +'<br><br>'
-        + 'Mas vamos recomeçar, ok? Qual seu nome mmesmo? rsrs'
+        + 'Mas vamos recomeçar, ok? Qual seu nome mesmo? rsrs'
 
     conversa([frase], 'text', {placeholder: 'Digite seu nome e tecle enter.'}, function(val){
         usuario_nome = val;
@@ -210,6 +210,7 @@ function pergunta_5(email_errado){
 
         if(validate.isMail(val)) {
             usuario_email = val;
+            setCookie('usuario_email', usuario_email, expire);
             pergunta_6();
         } else {
             pergunta_5(val);
