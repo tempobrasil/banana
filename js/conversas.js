@@ -142,7 +142,7 @@ function pergunta_2(){
 
     var options = {
         index : ['S', 'N'],
-        item: ['Se apresente', 'Nem precisa, já conheço :)']
+        item: ['Sim, quero conhecê-los', 'Nem precisa, já conheço a Vitamina']
     };
 
 
@@ -220,6 +220,9 @@ function pergunta_5(email_errado){
 }
 
 function pergunta_6(){
+    var frase_fake = 'E aí... ta assistindo Game of Thrones? Ops..';
+
+
     var frase = 'Perfeito! Então vamos ao que interessa.'
     + '<br><br>'
     + 'Ao quê devo a honra da sua visita?'
@@ -230,7 +233,7 @@ function pergunta_6(){
     };
 
 
-    conversa([frase], 'question', options, function(val){
+    conversa([frase_fake, frase], 'question', options, function(val){
 
         if(val == 'Portifolio')
             redireciona_portifolio();
