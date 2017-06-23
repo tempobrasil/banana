@@ -11,6 +11,9 @@
   font-size: 20px;
   color: #fff1ca;
 }
+#conversas .digitar strong {
+  color: #e6cb44;
+}
 #conversas div.resposta {
   padding: 25px 0;
 }

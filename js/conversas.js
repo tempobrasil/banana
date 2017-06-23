@@ -221,7 +221,7 @@ function pergunta_5(email_errado){
 
 function pergunta_6(){
     var frases_fake = [
-        'E aí... ta assistindo Game of Thrones? Ops..',
+        'E aí... ta curte Game of Thrones? Ops..',
         'E aí.. quer comprar um UNO 147, inteirão? Ops..',
         'E aí.. que tal qualquer hora um cineminha? Ops...'
     ];
@@ -296,7 +296,7 @@ function pergunta_7(){
 
     var frase = 'Opa! Já estamos ansiosos pra trabalhar pra você.'
         + '<br><br>'
-        + 'Antes, fale pra gente um pouco de quail tipo de trabalho você está procurando:'
+        + 'Antes, fale pra gente um pouco de qual tipo de trabalho você está procurando:'
 
     var options = {
         index : ['Design', 'Web', 'Outro'],
@@ -307,12 +307,73 @@ function pergunta_7(){
         ]
     };
 
+    conversa([frase], 'question',options, function(val){
+
+        if(val == 'Design')
+          pergunta_8();
+        else
+          alert('Esta página ainda está sendo desenvolvida');
+
+    });
+}
+
+function pergunta_8(){
+
+    var frase = 'Design? Veio ao lugar certo! :)'
+        + '<br><br>'
+        + 'Nos conte, o quê, especificamente, precisa:'
+
+    var itens_array = [
+        'Logomarca',
+        'Cartão de Visita',
+        'Anúncio',
+        'Post (Facebook, Instagram, etc)',
+        'Tema de FanPage',
+        'Banner',
+        'Marca Página',
+        'Tratamento de Foto',
+        'Flyer',
+        'Folder',
+        'Ícone',
+        'Outros'
+    ]
+    var options = {
+        index : itens_array,
+        item: itens_array
+    };
+
+    conversa([frase], 'question',options, function(val){
+
+        abrir_solicitacao(val);
+
+    });
+}
+
+function abrir_solicitacao(servico){
+
+    var frase = 'Ok, já entendi. '
+        + '<br>'
+        + 'Anote aí o número do seu pedido <strong>#0001</strong>.'
+        + '<br>'
+        + 'Fique tranquilo que já enviamos um e-mail pra você contendo esse número também. :)'
+        + '<br><br>'
+        + 'Deixe eu explicar: esse é o número que você vai acompanhar sua solicitação e, também, que nossos atendentes utilizaram pra identificar você.'
+
+    var itens_array = [
+        'Ver solicitação'
+    ]
+    var options = {
+        index : itens_array,
+        item: itens_array
+    };
+
     conversa([frase], 'question',options, function(){
 
         //document.location.href = 'http://www.blog.tiago.art.br';
         alert('Esta página ainda está sendo desenvolvida');
 
     });
+
 }
 
 var LHCChatOptions
