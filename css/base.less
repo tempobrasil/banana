@@ -70,3 +70,53 @@ header{
   }
 
 }
+
+#lhc_status_container{
+
+  width: 200px!important;
+
+  right: 15px!important;
+  background-color: @cor-principal!important;
+  color: @color-black!important;
+  border: 0!important;
+
+  -webkit-border-top-left-radius: 3px!important;
+  -webkit-border-top-right-radius: 3px!important;
+  -moz-border-radius-topleft: 3px!important;
+  -moz-border-radius-topright: 3px!important;
+  border-top-left-radius: 3px!important;
+  border-top-right-radius: 3px!important;
+
+  #online-icon,
+  #offline-icon{
+    background: none!important;
+    padding: 5px;
+    text-align: center;
+    .lhc-text-status{
+      text-align: center;
+    }
+  }
+
+}
+
+#lhc_container {
+
+  right: 15px!important;
+
+  #lhc_header{
+    background-color: @cor-principal;
+
+    #lhc_min::before{
+      content: url("../images/chat/min.png")
+    }
+  }
+
+  #lhc_iframe_container{
+
+    p{
+      color: red!important;
+    }
+
+  }
+
+}

@@ -220,7 +220,13 @@ function pergunta_5(email_errado){
 }
 
 function pergunta_6(){
-    var frase_fake = 'E aí... ta assistindo Game of Thrones? Ops..';
+    var frases_fake = [
+        'E aí... ta assistindo Game of Thrones? Ops..',
+        'E aí.. quer comprar um UNO 147, inteirão? Ops..',
+        'E aí.. que tal qualquer hora um cineminha? Ops...'
+    ];
+
+    frases_fake = shuffle(frases_fake);
 
 
     var frase = 'Perfeito! Então vamos ao que interessa.'
@@ -233,12 +239,14 @@ function pergunta_6(){
     };
 
 
-    conversa([frase_fake, frase], 'question', options, function(val){
+    conversa([frases_fake[0], frase], 'question', options, function(val){
 
         if(val == 'Portifolio')
             redireciona_portifolio();
         else if(val == 'Falar')
             redireciona_atendimento();
+        else if (val == 'Contratar')
+            pergunta_7();
 
     });
 }
@@ -274,13 +282,63 @@ function redireciona_atendimento(){
 
     var options = {
         index : ['S'],
-        item: ['Ir a página de Atendimento']
+        item: ['Falar com um humano']
     };
 
     conversa([frase], 'question',options, function(){
 
-            //document.location.href = 'http://www.blog.tiago.art.br';
+        //document.location.href = 'http://www.blog.tiago.art.br';
+        iniciarChat('Não me dou bem com robôs. Prefiro falar com um humano igual a mim. :)');
+    });
+}
+
+function pergunta_7(){
+
+    var frase = 'Opa! Já estamos ansiosos pra trabalhar pra você.'
+        + '<br><br>'
+        + 'Antes, fale pra gente um pouco de quail tipo de trabalho você está procurando:'
+
+    var options = {
+        index : ['Design', 'Web', 'Outro'],
+        item: [
+            'Design (Logomarca, Anúncio, Post de facebook, etc',
+            'Web (Site, Loja Virtual, E-mail Marketing, etc)',
+            'Outro tipo de trabalho'
+        ]
+    };
+
+    conversa([frase], 'question',options, function(){
+
+        //document.location.href = 'http://www.blog.tiago.art.br';
         alert('Esta página ainda está sendo desenvolvida');
 
     });
+}
+
+var LHCChatOptions
+function iniciarChat(msg){
+
+    LHCChatOptions = {};
+
+    LHCChatOptions.attr_prefill = new Array();
+    LHCChatOptions.attr_prefill.push({'name':'email','value': usuario_email,'hidden':false});
+    LHCChatOptions.attr_prefill.push({'name':'username','value': usuario_nome,'hidden':true});
+
+    if(typeof msg !== undefined)
+        LHCChatOptions.attr_prefill.push({'name':'question','value': msg,'hidden':true});
+
+
+    LHCChatOptions.opt = {widget_height:340,widget_width:300,popup_height:520,popup_width:500};
+    (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        var referrer = (document.referrer) ? encodeURIComponent(document.referrer.substr(document.referrer.indexOf('://')+1)) : '';
+        var location  = (document.location) ? encodeURIComponent(window.location.href.substring(window.location.protocol.length)) : '';
+        po.src = '//atendimento.zbraestudio.com.br/index.php/por/chat/getstatus/(click)/internal/(position)/bottom_right/(ma)/br/(top)/350/(units)/pixels/(leaveamessage)/true/(department)/1/(disable_pro_active)/true/(theme)/1?r='+referrer+'&l='+location;
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+
+    /* muda botões do dialogo */
+    $('#lhc_container #lhc_close img').attr('src', 'http://localhost/github/vitamina/images/cancel.png');
+    $('#lhc_container #lhc_remote_window img').attr('src', 'http://localhost/github/vitamina/images/application_double.png');
+
 }

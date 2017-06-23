@@ -63,3 +63,38 @@ header #logo {
   margin: 50px auto;
   display: none;
 }
+#lhc_status_container {
+  width: 200px!important;
+  right: 15px!important;
+  background-color: #e6cb44 !important;
+  color: #333333 !important;
+  border: 0!important;
+  -webkit-border-top-left-radius: 3px!important;
+  -webkit-border-top-right-radius: 3px!important;
+  -moz-border-radius-topleft: 3px!important;
+  -moz-border-radius-topright: 3px!important;
+  border-top-left-radius: 3px!important;
+  border-top-right-radius: 3px!important;
+}
+#lhc_status_container #online-icon,
+#lhc_status_container #offline-icon {
+  background: none!important;
+  padding: 5px;
+  text-align: center;
+}
+#lhc_status_container #online-icon .lhc-text-status,
+#lhc_status_container #offline-icon .lhc-text-status {
+  text-align: center;
+}
+#lhc_container {
+  right: 15px!important;
+}
+#lhc_container #lhc_header {
+  background-color: #e6cb44;
+}
+#lhc_container #lhc_header #lhc_min::before {
+  content: url("../images/chat/min.png");
+}
+#lhc_container #lhc_iframe_container p {
+  color: red!important;
+}
