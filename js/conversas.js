@@ -178,7 +178,7 @@ function pergunta_3(){
     + 'E o melhor de tudo, é mega saudável!  Sempre divertida, criativa, mas com muita responsabilidade e profissionalismo.'
 
     + '<br><br>'
-    + 'Antes de continuarmos o papo, conte pra gente seu e-mail:'
+    + 'Antes de continuarmos o papo, conte pra gente seu e-mail:';
 
     conversa([frase], 'text', {placeholder: 'digite seu e-mail e depois enter'}, function(val){
 
