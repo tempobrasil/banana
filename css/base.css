@@ -98,3 +98,6 @@ header #logo {
 #lhc_container #lhc_iframe_container p {
   color: red!important;
 }
+.typed-cursor {
+  display: none;
+}

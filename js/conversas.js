@@ -36,7 +36,7 @@ function conversa(frases, respostaTipo, respostaVars, respostaCallback){
 
     Typed.new('.digitar', {
         strings: frases,
-        typeSpeed: 0,
+        typeSpeed: -10,
         callback: function(){
 
             if(respostaTipo == 'text'){

@@ -1,5 +1,4 @@
 <?
-die('chegou na index.php');
 include('includes/autoload.php');
 
 //se for em branco, redireciona pro /home
