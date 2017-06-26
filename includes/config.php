@@ -22,7 +22,7 @@ if(is_localhost()){
 } else {
 
   set_config('SITE_URL'         , 'http://www.zbraestudio.com.br/vitamina/');
-  set_config('SITE_PATH'        , '/dados/http/zbraestudio.com.br/www/vimatina/');
+  set_config('SITE_PATH'        , '/dados/http/zbraestudio.com.br/www/vitamina/');
 
 }
 
