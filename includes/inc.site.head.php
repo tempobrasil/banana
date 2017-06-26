@@ -15,7 +15,7 @@
     <script src="<?= get_config('SITE_URL'); ?>bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- BOWER - rhinoJS -->
-    <script src="<?= get_config('SITE_URL'); ?>bower_components/rhino/dist/js/rhinoJS.js"></script>
+    <script src="<?= get_config('SITE_URL'); ?>bower_components/rhinoJS/dist/rhinoJS.js"></script>
 
     <!-- BOWER - Font Awesome -->
     <link rel="stylesheet" href="<?= get_config('SITE_URL'); ?>bower_components/font-awesome/css/font-awesome.min.css">
