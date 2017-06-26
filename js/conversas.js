@@ -180,7 +180,7 @@ function pergunta_3(){
     + '<br><br>'
     + 'Antes de continuarmos o papo, conte pra gente seu e-mail:';
 
-    conversa([frase], 'text', {placeholder: 'digite seu e-mail e depois enter'}, function(val){
+    conversa([frase], 'text', {placeholder: 'digite seu e-mail e depois de enter'}, function(val){
 
         if(validate.isMail(val)) {
             usuario_email = val;
