@@ -63,10 +63,13 @@ expire.setDate(expire.getDate() +365); // +1 ano
 
 function iniciar_conversa() {
 
-    if (getCookie('usuario_email') == null)
+    RoboPing('session_reset', null);
+
+    if (getCookie('usuario_email') == null) {
         pergunta_1();
-    else
+    } else {
         pergunta_voltou();
+    }
 
 }
 
@@ -89,13 +92,17 @@ function pergunta_voltou(){
             usuario_nome = getCookie('usuario_nome');
             usuario_email = getCookie('usuario_email');
 
+            RoboPing('nome', usuario_nome, function(){
+                RoboPing('email', usuario_email);
+            });
+
+
             pergunta_6();
 
         } else {
 
             deleteCookie('usuario_nome');
             deleteCookie('usuario_email');
-
             pergunta_voltou_nome();
 
         }
@@ -114,6 +121,7 @@ function pergunta_voltou_nome(){
     conversa([frase], 'text', {placeholder: 'Digite seu nome e tecle enter.'}, function(val){
         usuario_nome = val;
         setCookie('usuario_nome', usuario_nome, expire);
+        RoboPing('nome', usuario_nome);
         pergunta_2();
     });
 }
@@ -130,6 +138,7 @@ function pergunta_1(){
     conversa([frase], 'text', {placeholder: 'Digite seu nome e tecle enter.'}, function(val){
         usuario_nome = val;
         setCookie('usuario_nome', usuario_nome, expire);
+        RoboPing('nome', usuario_nome);
         pergunta_2();
     });
 }
@@ -148,10 +157,13 @@ function pergunta_2(){
 
     conversa([frase], 'question', options, function(val){
 
-        if(val == 'S')
+        if(val == 'S') {
+            RoboPing('passos', 'Disse que gostaria de conhecer a Vitamina');
             pergunta_3();
-        else
+        } else {
             pergunta_4();
+            RoboPing('passos', 'Disse que já conhecia a Vitamina');
+        }
 
     });
 }
@@ -168,11 +180,12 @@ function pergunta_3(){
     + '<br><br>'
     + 'Antes de continuarmos o papo, conte pra gente seu e-mail:'
 
-    conversa([frase], 'text', {placeholder: 'seunome@dominio.com depois enter'}, function(val){
+    conversa([frase], 'text', {placeholder: 'digite seu e-mail e depois enter'}, function(val){
 
         if(validate.isMail(val)) {
             usuario_email = val;
             setCookie('usuario_email', usuario_email, expire);
+            RoboPing('email', usuario_email);
             pergunta_6();
         } else {
             pergunta_5(val);
@@ -192,6 +205,7 @@ function pergunta_4(){
         if(validate.isMail(val)) {
             usuario_email = val;
             setCookie('usuario_email', usuario_email, expire);
+            RoboPing('email', usuario_email);
             pergunta_6();
         } else {
             pergunta_5(val);
@@ -221,7 +235,7 @@ function pergunta_5(email_errado){
 
 function pergunta_6(){
     var frases_fake = [
-        'E aí... ta curte Game of Thrones? Ops..',
+        'E aí... curte Game of Thrones? Ops..',
         'E aí.. quer comprar um UNO 147, inteirão? Ops..',
         'E aí.. que tal qualquer hora um cineminha? Ops...'
     ];
@@ -235,18 +249,28 @@ function pergunta_6(){
 
     var options = {
         index : ['Contratar', 'Portifolio', 'Falar', ],
-        item: ['Quero contrara um trabalho', 'Quero conhecer os trabalhos que já fizeram', 'Desculpe, mas prefiro falar com um <i>serumaninho</i> de verdade']
+        item: ['Quero contrar um trabalho', 'Quero conhecer os trabalhos que já fizeram', 'Desculpe, mas prefiro falar com um <i>serumaninho</i> de verdade']
     };
 
 
     conversa([frases_fake[0], frase], 'question', options, function(val){
 
-        if(val == 'Portifolio')
+        if(val == 'Portifolio') {
+
+            RoboPing('passos', 'Disse que gostaria de conhecer o Portólio Vitamina.');
             redireciona_portifolio();
-        else if(val == 'Falar')
+
+        } else if(val == 'Falar') {
+
+            RoboPing('passos', 'Preferiu falar com um humano ao invés do robô.');
             redireciona_atendimento();
-        else if (val == 'Contratar')
+
+        } else if (val == 'Contratar') {
+
+            RoboPing('passos', 'Disse que queria nos contratar! :)');
             pergunta_7();
+
+        }
 
     });
 }
@@ -304,13 +328,16 @@ function pergunta_7(){
 
     conversa([frase], 'question',options, function(val){
 
-        if(val == 'Design')
-          pergunta_8();
-        else if(val == 'Web')
-          pergunta_9();
-        else if(val == 'Outro')
-            abrir_solicitacao('Outro');
-
+        if(val == 'Design') {
+            pergunta_8();
+            RoboPing('passos', 'Interesse por Design.');
+        } else if(val == 'Web') {
+            pergunta_9();
+            RoboPing('passos', 'Interesse por Web');
+        } else if(val == 'Outro') {
+            abrir_descricao('Outro');
+            RoboPing('passos', 'Interesse por um assunto que não estava na lista.');
+        }
     });
 }
 
@@ -341,7 +368,8 @@ function pergunta_8(){
 
     conversa([frase], 'question',options, function(val){
 
-        abrir_solicitacao(val);
+        abrir_descricao(val);
+        RoboPing('passos', 'Interesse por ' + val + '.');
 
     });
 }
@@ -373,16 +401,16 @@ function pergunta_9(){
 
     conversa([frase], 'question',options, function(val){
 
-        abrir_solicitacao(val);
+        abrir_descricao(val);
 
     });
 }
 
-function abrir_solicitacao(servico){
+function abrir_solicitacao(codigo){
 
     var frase = 'Ok, já entendi. '
         + '<br>'
-        + 'Anote aí o número do seu pedido <strong>#0001</strong>.'
+        + 'Anote aí o número do seu pedido <strong>#' + codigo + '</strong>.'
         + '<br>'
         + 'Fique tranquilo que já enviamos um e-mail pra você com esse número também. :)'
         + '<br><br>'
@@ -400,6 +428,26 @@ function abrir_solicitacao(servico){
 
         //document.location.href = 'http://www.blog.tiago.art.br';
         alert('Esta página ainda está sendo desenvolvida');
+
+    });
+
+}
+
+function abrir_descricao(servico){
+
+    var frase = 'Show!'
+        + '<br>'
+        + 'Agora, descreva um pouco da sua necessidade.';
+
+
+
+    conversa([frase], 'text',{placeholder: 'Descreva sua necessidade e tecle enter'}, function(val){
+
+        var descricao = val;
+        RoboPing('pedido', null, function(val){
+            RoboPing('descricao', descricao);
+            abrir_solicitacao(val);
+        });
 
     });
 

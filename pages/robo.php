@@ -46,6 +46,12 @@
 <script src="js/bgs.js"></script>
 <script src="js/header.js"></script>
 <script src="js/conversas.js"></script>
+
+<script>
+
+  var site_root = '<?= get_config('SITE_URL'); ?>';
+
+</script>
 </head>
 
 <body>

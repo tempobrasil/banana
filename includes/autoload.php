@@ -18,8 +18,9 @@ include(get_config('SITE_PATH') . 'includes/girafa.page.php');
 
 /** Objetos Girafa */
 $page =   new girafaPage();
-//$db =     new girafaDB(get_config('DB_HOST'), get_config('DB_DB'), get_config('DB_USER'), get_config('DB_PASS'));
+$db =     new girafaDB(get_config('DB_HOST'), get_config('DB_DB'), get_config('DB_USER'), get_config('DB_PASS'));
 //$sites =   new girafaSites();
+
 
 
 include(get_config('SITE_PATH') . 'includes/autoload.phpmailer.php');

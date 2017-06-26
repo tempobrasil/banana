@@ -16,6 +16,22 @@ $(document).ready(function(){
 
     }, 3000);
 
-
-
 });
+
+
+
+function RoboPing(fase, data, callback){
+
+    $.ajax({
+        type: "POST",
+        url: site_root + 'scripts/robo.ping.php',
+        data: 'fase=' + fase + '&data=' + data,
+        datatype: "json",
+        success: function(result){
+
+            if(typeof callback !== undefined)
+                callback(result);
+        }
+    })
+
+}
