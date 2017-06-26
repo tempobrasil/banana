@@ -21,13 +21,13 @@ if(is_localhost()){
 
 } else {
 
-  set_config('SITE_URL'         , 'http://ola.zbraestudio.com.br/');
-  set_config('SITE_PATH'        , '/dados/http/zbraestudio.com.br/ola/');
+  set_config('SITE_URL'         , 'http://www.zbraestudio.com.br/vitamina/');
+  set_config('SITE_PATH'        , '/dados/http/zbraestudio.com.br/www/vimatina/');
 
 }
 
 set_config('SITE_NAME',              'olá');
-set_config('SITE_TITLE',              '[olá] Atendimento Online');
+set_config('SITE_TITLE',              'Agência VIMATINA');
 set_config('SITE_DESCRIPTION',        'xxx');
 set_config('SITE_TAGS',               'xxx, yyy');
 
