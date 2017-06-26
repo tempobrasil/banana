@@ -27,7 +27,7 @@ if(is_localhost()){
 }
 
 set_config('SITE_NAME',              'olá');
-set_config('SITE_TITLE',              'Agência VIMATINA');
+set_config('SITE_TITLE',              'VITAMINA (Agência 100% online');
 set_config('SITE_DESCRIPTION',        'xxx');
 set_config('SITE_TAGS',               'xxx, yyy');
 

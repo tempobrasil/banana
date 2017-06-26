@@ -426,8 +426,7 @@ function abrir_solicitacao(codigo){
 
     conversa([frase], 'question',options, function(){
 
-        //document.location.href = 'http://www.blog.tiago.art.br';
-        alert('Esta página ainda está sendo desenvolvida');
+        document.location.href = site_root + 'pedido/' + codigo;
 
     });
 

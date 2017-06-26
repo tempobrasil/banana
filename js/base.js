@@ -1,20 +1,16 @@
 /* Loading */
 $(document).ready(function(){
 
-    setTimeout(function(){
+    $('div#loading').animate({
 
-        $('div#loading').animate({
+        top: $(window).height()
 
-            top: $(window).height()
+    }, 300, 'easeInQuart', function(){
 
-        }, 300, 'easeInQuart', function(){
+        StartLogo();
+        $('div#loading').hide();
 
-            StartLogo();
-            $('div#loading').hide();
-
-        });
-
-    }, 3000);
+    });
 
 });
 

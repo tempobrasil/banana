@@ -62,6 +62,18 @@ function GetMessageRedirect(){
 
 }
 
+function SetPageTitle($title, $full = true){
+  if($full) {
+    $t = $title . ' – ' . get_config('SITE_TITLE');
+    $title = $t;
+  }
+
+  set_config('SITE_TITLE', $title);
+}
+function GetPageTitle(){
+  return get_config('SITE_TITLE');
+}
+
 function nl2p($string)
 {
   $string = str_replace(array('<p>', '</p>', '<br>', '<br />'), '', $string);
