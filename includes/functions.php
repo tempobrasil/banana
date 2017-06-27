@@ -70,6 +70,7 @@ function SetPageTitle($title, $full = true){
 
   set_config('SITE_TITLE', $title);
 }
+
 function GetPageTitle(){
   return get_config('SITE_TITLE');
 }
@@ -145,11 +146,6 @@ function getFileSize($bytes, $precision = 2) {
   $suffixes = array('by', 'kb', 'mb', 'gb', 'tb');
 
   return round(pow(1024, $base - floor($base)), $precision) .''. $suffixes[floor($base)];
-}
-
-function simplificaURL($url){
-  global $sites;
-  return str_replace($sites->index->Url, null, $url);
 }
 
 function getNumber($num, $decimal = false){

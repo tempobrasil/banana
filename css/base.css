@@ -130,10 +130,17 @@ header #logo {
 .container .page {
   background-color: #FFF;
   padding: 25px 50px;
+  margin-bottom: 25px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
 .container hr {
   border-bottom: 2px dotted #9B9B9B;
+}
+.container ul {
+  margin: 15px 0;
+}
+.container ul li {
+  list-style: inside;
 }

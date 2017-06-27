@@ -1,3 +1,4 @@
 .idea
 bower_components
+arquivos_pedidos/*
 css/less/*.css

@@ -10,6 +10,7 @@ date_default_timezone_set('America/Sao_Paulo');
 include('config.php');
 
 include(get_config('SITE_PATH') . 'includes/functions.php');
+include(get_config('SITE_PATH') . 'includes/functions.files.php');
 include(get_config('SITE_PATH') . 'includes/girafa.db.php');
 include(get_config('SITE_PATH') . 'includes/girafa.tablepost.php');
 include(get_config('SITE_PATH') . 'includes/girafa.date.php');
