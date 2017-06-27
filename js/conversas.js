@@ -129,7 +129,7 @@ function pergunta_voltou_nome(){
 function pergunta_1(){
 
     var frase = 'Oie! Tudo bem?<br>'
-    +'Sou o robô da agência Vitamina (<i>acredite se quiser, mas eu tômo vitamina de verdade, rsrs</i>)'
+    +'Sou o robô da agência Vitamina.'
     +'<br><br>'
     + 'Que bacana que você está por aqui. :)'
     +'<br>'
@@ -147,11 +147,11 @@ function pergunta_2(){
 
     var frase = 'Seja bem vindo ' + usuario_nome + '.'
     + '<br><br>'
-    + 'Mas viu.. quer que a gente se apresente também, ou já conhece a nossa Vitamina?';
+    + 'Viu.. quer que a gente se apresente também, ou já conhece a nossa agência?';
 
     var options = {
         index : ['S', 'N'],
-        item: ['Sim, quero conhecê-los', 'Nem precisa, já conheço a Vitamina']
+        item: ['Sim, quero conhecê-los', 'Não precisa, já conheço a Vitamina']
     };
 
 
@@ -198,7 +198,7 @@ function pergunta_4(){
 
     var frase = 'Show! Que bom que já nos conhece. Sabe que aqui com a gente a coisa é vitanimada, hehe.'
         + '<br><br>'
-        + 'Só pra caso aconteça algum problema e a gente perca a conexão, conte pra gente seu e-mail:'
+        + 'Só pra caso aconteça algum problema e a gente perca a conexão, conte pra nós seu e-mail:'
 
     conversa([frase], 'text', {placeholder: 'seunome@dominio.com depois enter'}, function(val){
 
@@ -415,6 +415,8 @@ function abrir_solicitacao(codigo){
         + 'Fique tranquilo que já enviamos um e-mail pra você com esse número também. :)'
         + '<br><br>'
         + 'Deixe eu explicar: esse é o número que você vai acompanhar sua solicitação e, também, que nossos atendentes utilizarão pra identificar você.'
+        + '<br><br>'
+        + 'Caso queira anexar arquivos ao pedido ou complementar com alguma informação, clique no botão abaixo.';
 
     var itens_array = [
         'Ver solicitação'
@@ -436,7 +438,9 @@ function abrir_descricao(servico){
 
     var frase = 'Show!'
         + '<br>'
-        + 'Agora, descreva um pouco da sua necessidade.';
+        + 'Agora, descreva um pouco da sua necessidade.'
+        + '<br><br>'
+        + 'Ah, só pra avisar que mais pra frente poderá anexar arquivos à sua solicitação, mas por enquanto só nos explique por texto mesmo.'
 
 
 
