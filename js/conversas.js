@@ -401,6 +401,7 @@ function pergunta_9(){
 
     conversa([frase], 'question',options, function(val){
 
+        RoboPing('passos', 'Interesse por ' + val + '.');
         abrir_descricao(val);
 
     });
