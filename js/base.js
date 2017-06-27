@@ -31,3 +31,11 @@ function RoboPing(fase, data, callback){
     })
 
 }
+
+function NumeroComZero(num){
+    var zeros = "00000";
+    num = num.toString();
+
+    return zeros.substr(0, (zeros.length - num.length)) + num;
+
+}

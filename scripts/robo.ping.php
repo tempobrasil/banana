@@ -63,18 +63,18 @@ if($fase == 'session_reset') {
 
     $reg = LoadRecord('RoboVisitas', "".$_SESSION['robo_id']."");
 
-    $codigo = md5($reg->Nome . $reg->Email . date('YmdHis'));
+    $chave = md5($reg->Nome . $reg->Email . date('YmdHis'));
 
     $post = new girafaTablePost();
     $post->table = 'RoboVisitas';
     $post->id = $_SESSION['robo_id'];
-    $post->AddFieldString('Codigo', $codigo);
+    $post->AddFieldString('Chave', $chave);
     $post->AddFieldString('Situacao', 'PED');
     $sql = $post->GetSql();
 
     $db->Execute($sql);
 
-    die($codigo);
+    die($_SESSION['robo_id'] . '|' . $chave);
 
 }
 ?>

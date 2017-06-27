@@ -167,4 +167,14 @@ function includeFoot(){
   include(get_config('SITE_PATH') . 'includes/inc.site.foot.php');
 }
 
+function NumeroComZero($num){
+
+  $zeros = '00000';
+
+  $num = strval($num);
+
+  return substr($zeros, 0, (strlen($zeros) - strlen($num))) . $num;
+
+}
+
 ?>

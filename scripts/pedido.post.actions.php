@@ -3,19 +3,18 @@ include('../includes/autoload.php');
 
 //print_r($_FILES);exit;
 
-if(!isset($_POST['codigo'])) {
+if(!isset($_POST['chave'])) {
     die('Ocorreu um erro.');
 }
 
-$pedido = LoadRecord('RoboVisitas', $_POST['codigo'], 'Codigo');
+$pedido = LoadRecord('RoboVisitas', $_POST['chave'], 'Chave');
 
 if ($_POST['action'] == 'addObs') {
 
     $descricao = $pedido->Descricao;
-    $descricao .= "\n\r \r\n ---";
-    $descricao .= "\n\r";
-    $descricao .= '(' . date('d/m/Y H\hi') . ')';
-    $descricao .= "\n\r \r\n";
+    $descricao .= "\n\r \r\n --- ";
+    $descricao .= date('d/m/Y H\hi');
+    $descricao .= " --- \n\r \r\n";
     $descricao .= $_POST['msg'];
 
     $post = new girafaTablePost();
@@ -27,7 +26,7 @@ if ($_POST['action'] == 'addObs') {
     $sql = $post->GetSql();
     $db->Execute($sql);
 
-    header('LOCATION:' . GetLink('pedido/' . $_POST['codigo']));
+    header('LOCATION:' . GetLink('pedido/' . $_POST['chave']));
 
 } elseif ($_POST['action'] == 'addFiles') {
 
@@ -35,7 +34,7 @@ if ($_POST['action'] == 'addObs') {
 
     $arquivo = $_FILES['arquivo'];
 
-    $arquivos_path = get_config('SITE_PATH') . 'arquivos_pedidos/' . $_POST['codigo'] . '/';
+    $arquivos_path = get_config('SITE_PATH') . 'arquivos_pedidos/' . $_POST['chave'] . '/';
     mkdir($arquivos_path);
 
     move_uploaded_file($arquivo['tmp_name'], $arquivos_path . $arquivo['name']);
@@ -52,7 +51,7 @@ if ($_POST['action'] == 'addObs') {
     $sql = $post->GetSql();
     $db->Execute($sql);
 
-    header('LOCATION:' . GetLink('pedido/' . $_POST['codigo']));
+    header('LOCATION:' . GetLink('pedido/' . $_POST['chave']));
 }
 
 ?>

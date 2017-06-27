@@ -1,11 +1,11 @@
 <?
 
-$codigo = GetParam(0);
-if(empty($codigo))
+$chave = GetParam(0);
+if(empty($chave))
     die('Ocorreu um erro.');
 
 //carrega pedido no DB
-$pedido = LoadRecord('RoboVisitas', $codigo, 'Codigo');
+$pedido = LoadRecord('RoboVisitas',$chave, 'Chave');
 if($pedido === false)
     die('Ocorreu um erro.');
 
@@ -20,7 +20,7 @@ includeHeader();
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <h1>Pedido <strong>#<?= $codigo; ?></strong></h1>
+                <h1>Pedido <strong>#<?= NumeroComZero($pedido->ID); ?></strong></h1>
                 <div class="page">
                     <h3>Informações do Cliente</h3>
                     <p><strong>Nome:</strong>  <?= $pedido->Nome; ?><br>
@@ -46,7 +46,7 @@ includeHeader();
                                 </div>
                                 <form action="<?= GetLink('scripts/pedido.post.actions.php'); ?>" method="post">
                                     <input name="action" type="hidden" value="addObs">
-                                    <input type="hidden" name="codigo" value="<?= $codigo; ?>">
+                                    <input type="hidden" name="chave" value="<?= $chave; ?>">
                                     <div class="modal-body">
                                             <div class="form-group">
                                                 <label for="message-text" class="form-control-label">Texto:</label>
@@ -79,7 +79,7 @@ includeHeader();
                         <?
                         foreach ($arquivos as $arquivo) {
                             ?>
-                        <li><a target="_blank" href="<?= get_config('SITE_URL')?>/arquivos_pedidos/<?= $codigo . '/' . $arquivo; ?>"><?= $arquivo; ?></a></li>
+                        <li><a target="_blank" href="<?= get_config('SITE_URL')?>/arquivos_pedidos/<?= $chave . '/' . $arquivo; ?>"><?= $arquivo; ?></a></li>
                         <?
                         }
                         ?>
@@ -101,7 +101,7 @@ includeHeader();
                                 </div>
                                 <form action="<?= GetLink('scripts/pedido.post.actions.php'); ?>" method="post" enctype="multipart/form-data">
                                     <input type="hidden" name="action" value="addFiles">
-                                    <input type="hidden" name="codigo" value="<?= $codigo; ?>">
+                                    <input type="hidden" name="chave" value="<?= $chave; ?>">
                                     <div class="modal-body">
 
                                             <div class="form-group">
@@ -143,5 +143,5 @@ includeFoot();
     /* Abre Chat */
     usuario_email = '<?= $pedido->Email; ?>';
     usuario_nome = '<?= $pedido->Nome; ?>';
-    iniciarChat('Quero atendimento pro meu pedido: <?= $codigo; ?>');
+    iniciarChat('Quero atendimento pro meu pedido: <?= $chave; ?>');
 </script>

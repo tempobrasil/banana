@@ -407,11 +407,11 @@ function pergunta_9(){
     });
 }
 
-function abrir_solicitacao(codigo){
+function abrir_solicitacao(id, chave){
 
     var frase = 'Ok, já entendi. '
         + '<br>'
-        + 'Anote aí o número do seu pedido <strong>#' + codigo + '</strong>.'
+        + 'Anote aí o número do seu pedido <strong>#' + NumeroComZero(id) + '</strong>.'
         + '<br>'
         + 'Fique tranquilo que já enviamos um e-mail pra você com esse número também. :)'
         + '<br><br>'
@@ -429,7 +429,7 @@ function abrir_solicitacao(codigo){
 
     conversa([frase], 'question',options, function(){
 
-        document.location.href = site_root + 'pedido/' + codigo;
+        document.location.href = site_root + 'pedido/' + chave;
 
     });
 
@@ -450,7 +450,10 @@ function abrir_descricao(servico){
         var descricao = val;
         RoboPing('pedido', null, function(val){
             RoboPing('descricao', descricao);
-            abrir_solicitacao(val);
+alert(val);
+            var x = val.split('|');
+
+            abrir_solicitacao(x[0], x[1]);
         });
 
     });
