@@ -450,7 +450,7 @@ function abrir_descricao(servico){
         var descricao = val;
         RoboPing('pedido', null, function(val){
             RoboPing('descricao', descricao);
-alert(val);
+
             var x = val.split('|');
 
             abrir_solicitacao(x[0], x[1]);

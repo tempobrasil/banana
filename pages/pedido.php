@@ -9,6 +9,7 @@ $pedido = LoadRecord('RoboVisitas',$chave, 'Chave');
 if($pedido === false)
     die('Ocorreu um erro.');
 
+$pedidoNr = NumeroComZero($pedido->ID);
 $data = new girafaDate($pedido->DataHora, ENUM_DATE_FORMAT::YYYY_MM_DD_HH_II_SS);
 
 
@@ -20,7 +21,7 @@ includeHeader();
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <h1>Pedido <strong>#<?= NumeroComZero($pedido->ID); ?></strong></h1>
+                <h1>Pedido <strong>#<?= $pedidoNr; ?></strong></h1>
                 <div class="page">
                     <h3>Informações do Cliente</h3>
                     <p><strong>Nome:</strong>  <?= $pedido->Nome; ?><br>
@@ -143,5 +144,5 @@ includeFoot();
     /* Abre Chat */
     usuario_email = '<?= $pedido->Email; ?>';
     usuario_nome = '<?= $pedido->Nome; ?>';
-    iniciarChat('Quero atendimento pro meu pedido: <?= $chave; ?>');
+    iniciarChat('Quero atendimento para o pedido #<?= $pedidoNr; ?>');
 </script>
