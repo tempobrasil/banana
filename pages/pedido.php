@@ -56,7 +56,7 @@ includeFoot();
 ?>
 
 <script>
-    usuario_email = '<?= $pedido->Nome; ?>';
-    usuario_nome = '<?= $pedido->Email; ?>';
+    usuario_email = '<?= $pedido->Email; ?>';
+    usuario_nome = '<?= $pedido->Nome; ?>';
     iniciarChat('Quero atendimento pro meu pedido: <?= $codigo; ?>')
 </script>
