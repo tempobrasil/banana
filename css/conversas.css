@@ -14,6 +14,11 @@
 #conversas .digitar strong {
   color: #e6cb44;
 }
+@media (max-width: 767px) {
+  #conversas .digitar {
+    font-size: 14px;
+  }
+}
 #conversas div.resposta {
   padding: 25px 0;
 }
@@ -29,6 +34,13 @@
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
+@media (max-width: 767px) {
+  #conversas div.resposta input[type=text] {
+    font-size: 13px;
+    pading: 0 10px;
+    height: 31px;
+  }
+}
 #conversas div.resposta div.options {
   display: none;
 }
@@ -41,4 +53,9 @@
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+}
+@media (max-width: 767px) {
+  #conversas div.resposta div.options button {
+    font-size: 12px;
+  }
 }

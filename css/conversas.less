@@ -12,6 +12,10 @@
       color: @cor-principal;
     }
 
+    @media (max-width: @screen-xs-max) {
+      font-size: 14px;
+    }
+
   }
 
   div.resposta{
@@ -34,6 +38,12 @@
 
         .fnc_arredonda(5px);
 
+        @media (max-width: @screen-xs-max) {
+          font-size: 13px;
+          pading: 0 10px;
+          height: 31px;
+        }
+
       }
 
     }
@@ -51,6 +61,11 @@
         margin: 7px;
 
         .fnc_arredonda(3px);
+
+
+        @media (max-width: @screen-xs-max) {
+          font-size: 12px;
+        }
       }
 
     }

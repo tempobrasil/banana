@@ -25,7 +25,7 @@ function RoboPing(fase, data, callback){
         datatype: "json",
         success: function(result){
 
-            if(typeof(callback) !== undefined)
+            if(typeof(callback) !== "undefined")
                 callback(result);
         }
     })
