@@ -20,6 +20,7 @@
     "font-awesome": "^4.7.0",
     "animate.css": "^3.5.2",
     "jquery.easing": "^1.3.1",
-    "typed.js": "^1.1.7"
+    "typed.js": "^1.1.7",
+    "unitegallery": "https://github.com/vvvmax/unitegallery.git#^1.7.40"
   }
 }

@@ -38,6 +38,11 @@
     <!-- BOWER - typed.js -->
     <script src="<?= get_config('SITE_URL'); ?>bower_components/typed.js/dist/typed.min.js"></script>
 
+    <!-- BOWER - unitegallery -->
+    <script src='<?= get_config('SITE_URL'); ?>bower_components/unitegallery/dist/js/unitegallery.min.js' type='text/javascript'  ></script>
+    <link  href='<?= get_config('SITE_URL'); ?>bower_components/unitegallery/dist/css/unite-gallery.css' rel='stylesheet' type='text/css' />
+    <script src='<?= get_config('SITE_URL'); ?>bower_components/unitegallery/dist/themes/tiles/ug-theme-tiles.js' type='text/javascript'></script>
+
     <!-- Controle de acesso pelo Mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
