@@ -22,6 +22,7 @@ if ($_POST['action'] == 'addObs') {
     $post->id = $pedido->ID;
 
     $post->AddFieldString('Descricao', $descricao);
+    $post->AddFieldString('Situacao', 'PED');
 
     $sql = $post->GetSql();
     $db->Execute($sql);
@@ -47,6 +48,7 @@ if ($_POST['action'] == 'addObs') {
     $post->id = $pedido->ID;
 
     $post->AddFieldString('Arquivos', GetArquivosString($arquivos_array));
+    $post->AddFieldString('Situacao', 'PED');
 
     $sql = $post->GetSql();
     $db->Execute($sql);

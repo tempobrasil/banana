@@ -158,11 +158,11 @@ function pergunta_2(){
     conversa([frase], 'question', options, function(val){
 
         if(val == 'S') {
-            RoboPing('passos', 'Disse que gostaria de conhecer a Vitamina');
+            RoboPingPassos('Disse que gostaria de conhecer a Vitamina', 'VIS');
             pergunta_3();
         } else {
+            RoboPingPassos('Disse que já conhecia a Vitamina', 'VIS');
             pergunta_4();
-            RoboPing('passos', 'Disse que já conhecia a Vitamina');
         }
 
     });
@@ -249,7 +249,7 @@ function pergunta_6(){
 
     var options = {
         index : ['Contratar', 'Portifolio', 'Falar', ],
-        item: ['Quero contrar um trabalho', 'Quero conhecer os trabalhos que já fizeram', 'Desculpe, mas prefiro falar com um <i>serumaninho</i> de verdade']
+        item: ['Quero contratar um trabalho', 'Quero conhecer os trabalhos que já fizeram', 'Desculpe, mas prefiro falar com um <i>serumaninho</i> de verdade']
     };
 
 
@@ -257,17 +257,17 @@ function pergunta_6(){
 
         if(val == 'Portifolio') {
 
-            RoboPing('passos', 'Disse que gostaria de conhecer o Portólio Vitamina.');
+            RoboPingPassos('Disse que gostaria de conhecer o Portólio Vitamina.', 'PRT');
             redireciona_portifolio();
 
         } else if(val == 'Falar') {
 
-            RoboPing('passos', 'Preferiu falar com um humano ao invés do robô.');
+            RoboPingPassos('Preferiu falar com um humano ao invés do robô.', 'FLR');
             redireciona_atendimento();
 
         } else if (val == 'Contratar') {
 
-            RoboPing('passos', 'Disse que queria nos contratar! :)');
+            RoboPingPassos('Disse que queria nos contratar! :)', 'CNT');
             pergunta_7();
 
         }
@@ -330,13 +330,13 @@ function pergunta_7(){
 
         if(val == 'Design') {
             pergunta_8();
-            RoboPing('passos', 'Interesse por Design.');
+            RoboPingPassos('Interesse por Design.', 'DSN');
         } else if(val == 'Web') {
             pergunta_9();
-            RoboPing('passos', 'Interesse por Web');
+            RoboPingPassos('Interesse por Web', 'WEB');
         } else if(val == 'Outro') {
             abrir_descricao('Outro');
-            RoboPing('passos', 'Interesse por um assunto que não estava na lista.');
+            RoboPingPassos('Interesse por um assunto que não estava na lista.', 'OUT');
         }
     });
 }
@@ -369,7 +369,7 @@ function pergunta_8(){
     conversa([frase], 'question',options, function(val){
 
         abrir_descricao(val);
-        RoboPing('passos', 'Interesse por ' + val + '.');
+        RoboPingPassos('Interesse por ' + val + '.', 'DSN');
 
     });
 }
@@ -401,7 +401,7 @@ function pergunta_9(){
 
     conversa([frase], 'question',options, function(val){
 
-        RoboPing('passos', 'Interesse por ' + val + '.');
+        RoboPingPassos('Interesse por ' + val + '.', 'WEB');
         abrir_descricao(val);
 
     });

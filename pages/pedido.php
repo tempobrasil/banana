@@ -125,10 +125,100 @@ includeHeader();
 
                     <h3>Resolução da Agência</h3>
 
-                    <div class="alert alert-warning alert-dismissible" role="alert">
+                    <?
+                    if($pedido->Situacao == 'PED') {
+                        $agenciaData = new girafaDate($pedido->AgenciaDataHora, ENUM_DATE_FORMAT::YYYY_MM_DD_HH_II_SS);
+                        ?>
 
-                        <strong>Aguardando informações!</strong> Para receber ajuda, entre no horário comercial nessa mesma página e fale com um atendente ao vivo ou envie um e-mail para <a href="mailto:suporte@zbraestudio.com.br">suporte@zbraestudio.com.br</a>.
-                    </div>
+                        <div class="alert alert-warning alert-dismissible" role="alert">
+
+                            <strong>Já iremos verificar...</strong><br><br> Bacana! Já recebemos suas informações e em breve alguém da nossa equipe estará verificando
+                            e confirmando que está tudo certo. Caso falte alguma informação ou tivermos agulma dúvida, avisaremos vocês aqui nesse mesmo espaço.
+
+                            <br><br>
+                            <small>Última movimentação: <?= $agenciaData->GetDayOfWeekLong() . ', ' . $agenciaData->GetFullDateForLong() . ' às ' . $agenciaData->GetDate('H:i'); ?></small>
+                        </div>
+
+                    <?
+                    } else if($pedido->Situacao == 'PIN'){
+                        $agenciaData = new girafaDate($pedido->AgenciaDataHora, ENUM_DATE_FORMAT::YYYY_MM_DD_HH_II_SS);
+                        ?>
+                        <div class="alert alert-danger alert-dismissible" role="alert">
+
+                            <strong>Faltam informações!</strong><br><br>
+                            Ops! Nossa equipe avaliou seu pedido e achou que faltou alguns detalhes. Confirma abaixo a mensagem escrita por nossa equipe:
+                            <br><br>
+                            <i><strong><?= nl2br($pedido->AgenciaMensagem); ?></strong></i>
+
+                            <br><br>
+                            <small>Última movimentação: <?= $agenciaData->GetDayOfWeekLong() . ', ' . $agenciaData->GetFullDateForLong() . ' às ' . $agenciaData->GetDate('H:i'); ?></small>
+                        </div>
+                    <?
+                    } else  if($pedido->Situacao == 'PPG'){
+                        $agenciaData = new girafaDate($pedido->AgenciaDataHora, ENUM_DATE_FORMAT::YYYY_MM_DD_HH_II_SS);
+                        ?>
+                        <div class="alert alert-info alert-dismissible" role="alert">
+
+                            <strong>Nossa proposta!</strong><br><br>
+                            Confira abaixo o arquivo com nossa proposta. Esperamos de coração que esteja dentro do que você estava esperando.
+                            <br><br>
+                            Trabalhamos sempre nossos preços dentro do mínimo que conseguimos, pra que a gente consiga firmar a parceria e ser um negócio bom pra nós, mas acima de tudo, pra você! :)
+                            <br><br>
+                            Queremos surpreender você com o prazo, então se estiver de acordo já efetue seu pagamento para gente já agilizar nossa parte.
+
+                            <br><br>
+                            <i><strong><?= nl2br($pedido->AgenciaMensagem); ?></strong></i>
+
+                            <br><br>
+                            <small>Última movimentação: <?= $agenciaData->GetDayOfWeekLong() . ', ' . $agenciaData->GetFullDateForLong() . ' às ' . $agenciaData->GetDate('H:i'); ?></small>
+
+
+                        </div>
+                        <button class="btn btn-primary">Nossa Proposta</button>
+
+                        <?
+                        if(!empty($pedido->PagSeguroBtnCode)) {
+                            ?>
+                            <h3>Pagamento:</h3>
+                            <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+                            <form action="https://pagseguro.uol.com.br/checkout/v2/payment.html" method="post"
+                                  onsubmit="PagSeguroLightbox(this); return false;">
+                                <!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+                                <input type="hidden" name="code" value="<?= $pedido->PagSeguroBtnCode; ?>"/>
+                                <input type="hidden" name="iot" value="button"/>
+                                <input type="image"
+                                       src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif"
+                                       name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!"/>
+                            </form>
+                            <script type="text/javascript"
+                                    src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js"></script>
+                            <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+
+                        <?
+                        }
+                    } else if($pedido->Situacao == 'PCN'){
+                        $agenciaData = new girafaDate($pedido->AgenciaDataHora, ENUM_DATE_FORMAT::YYYY_MM_DD_HH_II_SS);
+                        ?>
+                        <div class="alert alert-success alert-dismissible" role="alert">
+
+                            <strong>Concluído!</strong><br><br>
+                            Estamos imensamente felizes por ter trabalhado pra você. Esperamos que sua experiência tenha sido tão bacana como foi pra gente.
+                            Desejamos muito sucesso e no que precisar, conte sempre com a gente! ;D
+
+                            <br><br>
+                            Um imenso abraço de toda a equipe Vitamina.
+
+                            <br><br>
+                            <small>Última movimentação: <?= $agenciaData->GetDayOfWeekLong() . ', ' . $agenciaData->GetFullDateForLong() . ' às ' . $agenciaData->GetDate('H:i'); ?></small>
+                        </div>
+                    <?
+                    }
+                    ?>
+
+                    <p style="margin-top: 25px;">
+                        Utilize nosso chat para falar com um atendente e resolver qualquer assunto que achar necessário. Nossos atendentes estão sempre disponíveis no horário comercial.
+                        Caso prefira, escreva para <a href="mailto:suporte@zbraestudio.com.br">suporte@zbraestudio.com.br</a>.
+                    </p>
                 </div>
 
 

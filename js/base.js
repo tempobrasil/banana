@@ -32,6 +32,15 @@ function RoboPing(fase, data, callback){
 
 }
 
+function RoboPingPassos(text, status){
+    $.ajax({
+        type: "POST",
+        url: site_root + 'scripts/robo.ping.php',
+        data: 'fase=passos&data=' + text + '&status=' + status,
+        datatype: "json"
+    })
+}
+
 function NumeroComZero(num){
     var zeros = "00000";
     num = num.toString();

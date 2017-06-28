@@ -45,7 +45,7 @@ if($fase == 'session_reset') {
 } else if($fase == 'passos'){
 
     $reg = date('d/m/Y H:i') . ' - ' . $data . "\n";
-    $sql = "UPDATE RoboVisitas SET Passos = CONCAT(Passos, '" . $reg  . "') WHERE ID = " . $_SESSION['robo_id'];
+    $sql = "UPDATE RoboVisitas SET Passos = CONCAT(Passos, '" . $reg  . "'), Situacao='" . $_POST['status'] . "' WHERE ID = " . $_SESSION['robo_id'];
     $db->Execute($sql);
 
     die($sql);
