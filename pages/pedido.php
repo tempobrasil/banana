@@ -173,7 +173,7 @@ includeHeader();
 
 
                         </div>
-                        <button class="btn btn-primary">Nossa Proposta</button>
+                        <a href="#" target="_blank" title="Clique aqui para visualizar sua proposta" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Ver Proposta</a>
 
                         <?
                         if(!empty($pedido->PagSeguroBtnCode)) {
