@@ -70,6 +70,7 @@ if($fase == 'session_reset') {
     $post->id = $_SESSION['robo_id'];
     $post->AddFieldString('Chave', $chave);
     $post->AddFieldString('Situacao', 'PED');
+    $post->AddFieldDateTimeNow('AgenciaDataHora');
     $sql = $post->GetSql();
 
     $db->Execute($sql);

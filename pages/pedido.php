@@ -126,8 +126,9 @@ includeHeader();
                     <h3>Resolução da Agência</h3>
 
                     <?
+                    $agenciaData = new girafaDate($pedido->AgenciaDataHora, ENUM_DATE_FORMAT::YYYY_MM_DD_HH_II_SS);
+
                     if($pedido->Situacao == 'PED') {
-                        $agenciaData = new girafaDate($pedido->AgenciaDataHora, ENUM_DATE_FORMAT::YYYY_MM_DD_HH_II_SS);
                         ?>
 
                         <div class="alert alert-warning alert-dismissible" role="alert">
@@ -141,7 +142,6 @@ includeHeader();
 
                     <?
                     } else if($pedido->Situacao == 'PIN'){
-                        $agenciaData = new girafaDate($pedido->AgenciaDataHora, ENUM_DATE_FORMAT::YYYY_MM_DD_HH_II_SS);
                         ?>
                         <div class="alert alert-danger alert-dismissible" role="alert">
 
@@ -155,7 +155,6 @@ includeHeader();
                         </div>
                     <?
                     } else  if($pedido->Situacao == 'PPG'){
-                        $agenciaData = new girafaDate($pedido->AgenciaDataHora, ENUM_DATE_FORMAT::YYYY_MM_DD_HH_II_SS);
                         ?>
                         <div class="alert alert-info alert-dismissible" role="alert">
 
@@ -197,7 +196,6 @@ includeHeader();
                         <?
                         }
                     } else if($pedido->Situacao == 'PCN'){
-                        $agenciaData = new girafaDate($pedido->AgenciaDataHora, ENUM_DATE_FORMAT::YYYY_MM_DD_HH_II_SS);
                         ?>
                         <div class="alert alert-success alert-dismissible" role="alert">
 
