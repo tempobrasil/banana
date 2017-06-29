@@ -249,7 +249,7 @@ function pergunta_6(){
 
     var options = {
         index : ['Contratar', 'Portifolio', 'Falar', ],
-        item: ['Quero contratar um trabalho', 'Quero conhecer os trabalhos que já fizeram', 'Desculpe, mas prefiro falar com um <i>serumaninho</i> de verdade']
+        item: ['Quero contratar um trabalho', 'Quero conhecer os trabalho de vocês', 'Desculpe, mas prefiro falar com um <i>serumaninho</i> de verdade']
     };
 
 
@@ -277,7 +277,7 @@ function pergunta_6(){
 
 function redireciona_portifolio(){
 
-    var frase = 'Belezura! Clique no botão abaixo e você será redirecionado pra conhecer os trabalho que já realizamos...'
+    var frase = 'Belezura! Clique no botão abaixo e você será redirecionado pra conhecer os trabalhos que já realizamos...'
         + '<br><br>'
         + 'Grande abraço, ' + usuario_nome + '. Até mais! :)';
 
@@ -289,8 +289,8 @@ function redireciona_portifolio(){
 
     conversa([frase], 'question', options, function(){
 
-        //document.location.href = 'http://www.zbraestudio.com.br';
-        alert('Esta página ainda está sendo desenvolvida');
+        document.location.href = site_url = 'trabalhos';
+
 
     });
 }
