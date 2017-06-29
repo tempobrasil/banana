@@ -461,17 +461,41 @@ function abrir_descricao(servico){
 }
 
 var LHCChatOptions
-function iniciarChat(msg){
+function iniciarChat(msg) {
 
     LHCChatOptions = {};
 
     LHCChatOptions.attr_prefill = new Array();
-    LHCChatOptions.attr_prefill.push({'name':'email','value': usuario_email,'hidden':false});
-    LHCChatOptions.attr_prefill.push({'name':'username','value': usuario_nome,'hidden':true});
 
-    if(typeof msg !== undefined)
-        LHCChatOptions.attr_prefill.push({'name':'question','value': msg,'hidden':true});
 
+    /* Se usuario_email não existir, tenta pegar no cookie */
+    if (typeof usuario_email === "undefined") {
+        if(getCookie('usuario_email') !== null){
+            usuario_email = getCookie('usuario_email');
+            alert(usuario_email);
+        }
+    }
+
+    /* Se usuario_nome não existir, tenta pegar no cookie */
+    if (typeof usuario_nome === "undefined") {
+        if(getCookie('usuario_nome') !== null){
+            usuario_nome = getCookie('usuario_nome');
+            alert(usuario_nome);
+        }
+    }
+
+    if (typeof usuario_email !== "undefined") {
+
+        LHCChatOptions.attr_prefill.push({'name': 'email', 'value': usuario_email, 'hidden': false});
+    }
+
+    if (typeof(usuario_nome) !== "undefined") {
+        LHCChatOptions.attr_prefill.push({'name': 'username', 'value': usuario_nome, 'hidden': true});
+    }
+
+    if(typeof(msg) !== "undefined") {
+        LHCChatOptions.attr_prefill.push({'name': 'question', 'value': msg, 'hidden': true});
+    }
 
     LHCChatOptions.opt = {widget_height:340,widget_width:300,popup_height:520,popup_width:500};
     (function() {

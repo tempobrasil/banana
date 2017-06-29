@@ -95,7 +95,6 @@ includeFoot();
         });
     });
 
-
     /* Abre Chat */
     iniciarChat('Estava olhando o portfólio da Vitamina e queria conversar com vocês.');
 </script>

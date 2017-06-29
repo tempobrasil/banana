@@ -1,5 +1,4 @@
 <?
-SetPageTitle('Robô');
 includeHead();
 includeHeader();
 ?>
