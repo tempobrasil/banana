@@ -460,8 +460,17 @@ function abrir_descricao(servico){
 
 }
 
+function iniciarChat(msg){
+
+    !function(t){var e=t.createElement("script");e.type="text/javascript",e.charset="utf-8",
+        e.src="https://static.moxchat.it/visitor-widget-loader/pon30YrvAP.js",e.async=!0;
+        var r=t.getElementsByTagName("script")[0];r.parentNode.insertBefore(e,r);
+    }(document);
+
+}
+
 var LHCChatOptions
-function iniciarChat(msg) {
+function iniciarChatXXX(msg) {
 
     LHCChatOptions = {};
 
