@@ -472,7 +472,7 @@ function iniciarChat(msg) {
     if (typeof usuario_email === "undefined") {
         if(getCookie('usuario_email') !== null){
             usuario_email = getCookie('usuario_email');
-            alert(usuario_email);
+            //alert(usuario_email);
         }
     }
 
@@ -480,7 +480,7 @@ function iniciarChat(msg) {
     if (typeof usuario_nome === "undefined") {
         if(getCookie('usuario_nome') !== null){
             usuario_nome = getCookie('usuario_nome');
-            alert(usuario_nome);
+            //alert(usuario_nome);
         }
     }
 
