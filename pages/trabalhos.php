@@ -92,7 +92,7 @@ $html = ' <p>Olá ' . $nome . ', tudo bem com você? <strong>#1234566</strong></
       </td>';
 
 //testar e-mail...
-$res = mail_cliente_msg_send('Tiaguinho', 'tihhgoncalves@gmail.com', $texto);
+$res = mail_cliente_msg_send('Tiaguinho', 'tihhgoncalves@gmail.com', $html, 'Já recebemos seu pedido #12345', 'tihhgoncalves@gmail.com');
 if($res === true)
   echo('[E-mail enviado com sucesso!' . $res);
 else
