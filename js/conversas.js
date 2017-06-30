@@ -462,10 +462,63 @@ function abrir_descricao(servico){
 
 function iniciarChat(msg){
 
-    !function(t){var e=t.createElement("script");e.type="text/javascript",e.charset="utf-8",
-        e.src="https://static.moxchat.it/visitor-widget-loader/pon30YrvAP.js",e.async=!0;
-        var r=t.getElementsByTagName("script")[0];r.parentNode.insertBefore(e,r);
+    /* Se usuario_email não existir, tenta pegar no cookie */
+    if (typeof usuario_email === "undefined") {
+        if(getCookie('usuario_email') !== null){
+            usuario_email = getCookie('usuario_email');
+            //alert(usuario_email);
+        }
+    }
+
+    /* Se usuario_nome não existir, tenta pegar no cookie */
+    if (typeof usuario_nome === "undefined") {
+        if(getCookie('usuario_nome') !== null){
+            usuario_nome = getCookie('usuario_nome');
+            //alert(usuario_nome);
+        }
+    }
+
+
+    !function(t){
+        var e=t.createElement("script");
+            e.type="text/javascript",
+            e.charset="utf-8",
+            e.src="https://static.moxchat.it/visitor-widget-loader/pon30YrvAP.js",
+            e.async=!0;
+
+        var r=t.getElementsByTagName("script")[0];
+        r.parentNode.insertBefore(e,r);
     }(document);
+
+    $(window).load(function(){
+        $('.mxcw-titlebar').click(function(){
+
+
+            setTimeout(function(){
+
+                //alert('clic');
+
+                if (typeof usuario_nome !== "undefined") {
+                    var input_nome = $('.mxcw-form input[type=text]');
+                    input_nome.val(usuario_nome);
+                    input_nome.attr('type', 'hidden');
+                }
+
+                if (typeof usuario_email !== "undefined") {
+                    var input_email = $('.mxcw-form input[type=email]');
+                    input_email.val(usuario_email);
+                    input_email.attr('type', 'hidden');
+                }
+
+            }, 500)
+
+
+        });
+    });
+
+
+
+    //$('.mxcw-form input[type=text]').hide();
 
 }
 
