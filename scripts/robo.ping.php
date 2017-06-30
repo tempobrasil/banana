@@ -75,6 +75,28 @@ if($fase == 'session_reset') {
 
     $db->Execute($sql);
 
+    /* Enviar e-mail */
+    $link = GetLink('pedido/' . $pedido->Chave);
+    $codigo = NumeroComZero($pedido->ID);
+    $html = ' <p>Olá ' . $nome . ', tudo bem com você?</p>
+        <p>Já recebemos seu pedido. Ele é o pedido de número <strong>#' . $codigo . '</strong>.</p>
+
+        <p>Guarde esse número. É através dele que nós vamos nos entender, ok?</p>
+
+        <p>Aproveite e veja agora como está o andamento do seu pedido, <a href="' . $link . '">através desse link</a>.
+        </p>
+
+        <p>Bom, é isso! Estamos muito feliz de dar essa vitaminada na sua marca.<br>
+        Conte sempre com a gente! :)</p>
+
+        <p>Grande abraço!
+        <br><i>Equipe Vitamina</i></p>
+      </td>';
+
+    //testar e-mail...
+    $res = mail_cliente_msg_send($pedido->Nome, $pedido->Email, $html, 'Já recebemos seu pedido #' . $codigo, 'tihhgoncalves@gmail.com');
+    
+
     die($_SESSION['robo_id'] . '|' . $chave);
 
 }
