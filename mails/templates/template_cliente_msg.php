@@ -1,5 +1,5 @@
 <?
-function mail_cliente_msg_getHtml($nome){
+function mail_cliente_msg_getHtml($nome, $texto){
 
   $html = '<html>
   <head>
@@ -8,21 +8,12 @@ function mail_cliente_msg_getHtml($nome){
   <body style="background-color:#F5F5F5;padding: 25px;font-family: Tahoma, Geneva, sans-serif;">
   <table width="100%" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td style="background-color: #FD2F48; border: 1px solid #EEEEEE; background-image: url(cid:logo); background-repeat:no-repeat; background-position: center; height:72px;">
+      <td style="background-color: #FD2F48; border: 1px solid #EEEEEE; background-image: url(cid:logo); background-repeat:no-repeat; background-position: center; height:150px;">
       </td>
     </tr>
     <tr>
-      <td style="border:1px solid #EEEEEE; border-top: 0; background-color: #FFF; padding: 35px; color:#666666;font-family: Tahoma, Geneva, sans-serif;font-size: 15px;">
-      <p>Olá ' . $nome . ', tudo bem com você? <strong>#1234566</strong></p>
-        <p>Estamos enviando esse e-mail para avisar você que nossa equipe já foi avisada a respeito da sua solicitação de convite já está trabalhando nela.
-        Em breve já estaremo retornando você!</p>
-
-        <p>Bom, é isso! Estou muito feliz em tê-lo com a gente.<br>
-        Qualquer dúvida, entre em contato com nosso suporte.</p>
-
-        <p>Grande abraço!
-        <br><i>Tiago Gonçalves</i><br>(Diretor)<br></p>
-      </td>
+      <td style="border:1px solid #EEEEEE; border-top: 0; background-color: #FFF; padding: 35px; color:#666666;font-family: Tahoma, Geneva, sans-serif;font-size: 18px;">
+      ' . $texto  . '
     </tr>
   </table>
   <br/><br/>
@@ -39,15 +30,16 @@ Copyright 2017 Agência Vitamina.
 
 }
 
-function mail_cliente_msg_send($nome, $email){
+function mail_cliente_msg_send($nome, $email, $texto, $assunto, $cco){
   global $mailer;
 
   $mailer->addAddress($email);
 
-  $mailer->addCC('vitamina@zbraestudio.com.br');
+  if(!empty($cco))
+    $mailer->addCC($cco);
 
-  $mailer->Subject = 'Já recebemos seu cadastro!  :)';
-  $mailer->Body    = mail_cliente_msg_getHtml($nome);
+  $mailer->Subject = $assunto;
+  $mailer->Body    = mail_cliente_msg_getHtml($nome, $texto);
 
   if($mailer->send())
     return true;
