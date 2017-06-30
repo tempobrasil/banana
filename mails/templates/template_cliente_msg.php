@@ -5,10 +5,10 @@ function mail_cliente_msg_getHtml($nome){
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   </head>
-  <body style="background-color:#FD2F48;padding: 25px;font-family: Tahoma, Geneva, sans-serif;">
+  <body style="background-color:#F5F5F5;padding: 25px;font-family: Tahoma, Geneva, sans-serif;">
   <table width="100%" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td style="background-color: #F8F8F8; border: 1px solid #EEEEEE; background-image: url(cid:logo); background-repeat:no-repeat; background-position: center; line-height:72px;font-size:20px;">
+      <td style="background-color: #FD2F48; border: 1px solid #EEEEEE; background-image: url(cid:logo); background-repeat:no-repeat; background-position: center; line-height:72px;font-size:20px;">
       </td>
     </tr>
     <tr>
