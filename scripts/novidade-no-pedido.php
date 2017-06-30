@@ -17,8 +17,9 @@ $codigo = NumeroComZero($pedido->ID);
 $html = ' <p>Olá ' . $pedido->Nome . ', tudo bem com você?</p>
         <p>Temos um recado importante pra você.</p>
 
-         <p>Seu pedido <strong>#' . $codigo . '</strong> foi verificado por nossa equipe e houve uma alteração da situação do pedido.
-         Dê uma espiada lá <a href="' . $link . '">através desse link</a>.
+         <p>Seu pedido <strong>#' . $codigo . '</strong> foi verificado por nossa equipe e houve uma alteração da situação do pedido.</p>
+
+         <p>Dê uma espiada no pedido <a href="' . $link . '">através desse link</a>.
 
         <p>Bom, é isso! Estamos muito feliz de dar essa vitaminada na sua marca.<br>
         Conte sempre com a gente! :)</p>
