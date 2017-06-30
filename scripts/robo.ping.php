@@ -76,8 +76,8 @@ if($fase == 'session_reset') {
     $db->Execute($sql);
 
     /* Enviar e-mail */
-    $link = GetLink('pedido/' . $pedido->Chave);
-    $codigo = NumeroComZero($pedido->ID);
+    $link = GetLink('pedido/' . $reg->Chave);
+    $codigo = NumeroComZero($reg->ID);
     $html = ' <p>Olá ' . $nome . ', tudo bem com você?</p>
         <p>Já recebemos seu pedido. Ele é o pedido de número <strong>#' . $codigo . '</strong>.</p>
 
@@ -94,8 +94,8 @@ if($fase == 'session_reset') {
       </td>';
 
     //testar e-mail...
-    $res = mail_cliente_msg_send($pedido->Nome, $pedido->Email, $html, 'Já recebemos seu pedido #' . $codigo, 'tihhgoncalves@gmail.com');
-    
+    $res = mail_cliente_msg_send($reg->Nome, $reg->Email, $html, 'Já recebemos seu pedido #' . $codigo, 'tihhgoncalves@gmail.com');
+
 
     die($_SESSION['robo_id'] . '|' . $chave);
 
