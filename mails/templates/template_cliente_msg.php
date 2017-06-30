@@ -12,7 +12,7 @@ function mail_cliente_msg_getHtml($nome, $texto){
       </td>
     </tr>
     <tr>
-      <td style="border:1px solid #EEEEEE; border-top: 0; background-color: #FFF; padding: 35px; color:#666666;font-family: Tahoma, Geneva, sans-serif;font-size: 18px;">
+      <td style="border:1px solid #EEEEEE; border-top: 0; background-color: #FFF; padding: 35px; color:#666666;font-family: Tahoma, Geneva, sans-serif;font-size: 17px;">
       ' . $texto  . '
     </tr>
   </table>

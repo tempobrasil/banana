@@ -79,24 +79,6 @@ includeHeader();
 includeFooter();
 includeFoot();
 
-
-$html = ' <p>Olá ' . $nome . ', tudo bem com você? <strong>#1234566</strong></p>
-        <p>Estamos enviando esse e-mail para avisar você que nossa equipe já foi avisada a respeito da sua solicitação de convite já está trabalhando nela.
-        Em breve já estaremo retornando você!</p>
-
-        <p>Bom, é isso! Estou muito feliz em tê-lo com a gente.<br>
-        Qualquer dúvida, entre em contato com nosso suporte.</p>
-
-        <p>Grande abraço!
-        <br><i>Tiago Gonçalves</i><br>(Diretor)<br></p>
-      </td>';
-
-//testar e-mail...
-$res = mail_cliente_msg_send('Tiaguinho', 'tihhgoncalves@gmail.com', $html, 'Já recebemos seu pedido #12345', 'tihhgoncalves@gmail.com');
-if($res === true)
-  echo('[E-mail enviado com sucesso!' . $res);
-else
-  echo('E-mail ERRO:' . $res . ']');
 ?>
 
 <script>
