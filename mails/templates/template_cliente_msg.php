@@ -5,16 +5,15 @@ function mail_cliente_msg_getHtml($nome){
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   </head>
-  <body style="background-color:#F5F5F5;padding: 25px;font-family: Tahoma, Geneva, sans-serif;">
+  <body style="background-color:#FD2F48;padding: 25px;font-family: Tahoma, Geneva, sans-serif;">
   <table width="100%" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td style="background-color: #F8F8F8; border: 1px solid #EEEEEE;; background-image: url(cid:logo); background-repeat:no-repeat; background-position: 15px center; line-height:72px;padding-left: 285px; font-size:20px;color: #666666;">
-        CONVITE
+      <td style="background-color: #F8F8F8; border: 1px solid #EEEEEE; background-image: url(cid:logo); background-repeat:no-repeat; background-position: center; line-height:72px;font-size:20px;">
       </td>
     </tr>
     <tr>
-      <td style="border:1px solid #EEEEEE; border-top: 0; background-color: #FFF; padding: 35px; color:#666666;">
-      <p>Olá ' . $nome . ', tudo bem com você?</p>
+      <td style="border:1px solid #EEEEEE; border-top: 0; background-color: #FFF; padding: 35px; color:#666666;font-family: Tahoma, Geneva, sans-serif;font-size: 13px;">
+      <p>Olá ' . $nome . ', tudo bem com você? <strong>#1234566</strong></p>
         <p>Estamos enviando esse e-mail para avisar você que nossa equipe já foi avisada a respeito da sua solicitação de convite já está trabalhando nela.
         Em breve já estaremo retornando você!</p>
 
@@ -29,8 +28,8 @@ function mail_cliente_msg_getHtml($nome){
   <br/><br/>
   <center>
 <span style="font-style:italic; font-size: 11px; margin-top:5px;">
-Esta é uma mensagem automática, por favor não responda este e-mail.
-Copyright 2017 Driver UP.
+Esta é uma mensagem automática, mas caso precise de ajuda, responda esse e-mail com sua dúvida.
+Copyright 2017 Agência Vitamina.
 </span>
   </center>
   </body>
