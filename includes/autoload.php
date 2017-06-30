@@ -24,10 +24,8 @@ $db =     new girafaDB(get_config('DB_HOST'), get_config('DB_DB'), get_config('D
 
 include(get_config('SITE_PATH') . 'includes/autoload.phpmailer.php');
 
-/* E-mails */
-/*
-include(SITE_PATH . '/mails/templates/template_aula_assistindo.php');
-include(SITE_PATH . '/mails/templates/template_aula_respostas.php');
-*/
 
+
+/* E-mails */
+include(get_config('SITE_PATH') . 'mails/templates/template_cliente_msg.php');
 ?>

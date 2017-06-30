@@ -78,6 +78,13 @@ includeHeader();
 <?
 includeFooter();
 includeFoot();
+
+//testar e-mail...
+$res = mail_cliente_msg_send('Tiaguinho', 'tihhgoncalves@gmail.com');
+if($res === true)
+  echo('[E-mail enviado com sucesso!' . $res);
+else
+  echo('E-mail ERRO:' . $res . ']');
 ?>
 
 <script>
