@@ -3,7 +3,7 @@
 
 
 <?
-if(is_localhost()) {
+if(!is_localhost()) {
 ?>
     <!-- Google Analytics (início) -->
     <script>
