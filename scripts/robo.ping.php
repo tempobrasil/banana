@@ -75,7 +75,7 @@ if($fase == 'session_reset') {
 
     $db->Execute($sql);
 
-    /* Enviar e-mail */
+    /* Enviar e-mail (Novo Pedido) */
     $link = GetLink('pedido/' . $chave);
     $codigo = NumeroComZero($reg->ID);
     $html = ' <p>Olá ' . $reg->Nome . ', tudo bem com você?</p>
