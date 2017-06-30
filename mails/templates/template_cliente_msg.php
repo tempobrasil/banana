@@ -12,7 +12,7 @@ function mail_cliente_msg_getHtml($nome){
       </td>
     </tr>
     <tr>
-      <td style="border:1px solid #EEEEEE; border-top: 0; background-color: #FFF; padding: 35px; color:#666666;font-family: Tahoma, Geneva, sans-serif;font-size: 13px;">
+      <td style="border:1px solid #EEEEEE; border-top: 0; background-color: #FFF; padding: 35px; color:#666666;font-family: Tahoma, Geneva, sans-serif;font-size: 15px;">
       <p>Olá ' . $nome . ', tudo bem com você? <strong>#1234566</strong></p>
         <p>Estamos enviando esse e-mail para avisar você que nossa equipe já foi avisada a respeito da sua solicitação de convite já está trabalhando nela.
         Em breve já estaremo retornando você!</p>
