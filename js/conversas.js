@@ -12,7 +12,9 @@ function conversa(frases, respostaTipo, respostaVars, respostaCallback){
 
             if (e.keyCode == 13) {
 
-                respostaCallback(input.val());
+                var val = input.val();
+                input.fadeOut('slow');
+                respostaCallback(val);
             }
 
         });

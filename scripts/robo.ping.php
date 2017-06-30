@@ -76,9 +76,9 @@ if($fase == 'session_reset') {
     $db->Execute($sql);
 
     /* Enviar e-mail */
-    $link = GetLink('pedido/' . $reg->Chave);
+    $link = GetLink('pedido/' . $chave);
     $codigo = NumeroComZero($reg->ID);
-    $html = ' <p>Olá ' . $nome . ', tudo bem com você?</p>
+    $html = ' <p>Olá ' . $reg->Nome . ', tudo bem com você?</p>
         <p>Já recebemos seu pedido. Ele é o pedido de número <strong>#' . $codigo . '</strong>.</p>
 
         <p>Guarde esse número. É através dele que nós vamos nos entender, ok?</p>
