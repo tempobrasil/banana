@@ -11,9 +11,15 @@
 }
 
 .fnc_placeholder(@cor){
-  &::-webkit-input-placeholder,
-  &::-moz-placeholder,
-  &:-ms-input-placeholder,
+  &::-webkit-input-placeholder{
+    color: @cor;
+  }
+  &::-moz-placeholder{
+    color: @cor;
+  }
+  &:-ms-input-placeholder{
+    color: @cor;
+  }
   &:-moz-placeholder {
     color: @cor;
   }

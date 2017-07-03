@@ -5,7 +5,7 @@ function StartLogo(){
 
   $('#logo').css({
       top: '-' + logo_h + 'px',
-      marginLeft: '-' + (logo_w /2) + 'px',
+      marginLeft: '-' + (logo_w / 2) + 'px',
       display: 'block'
   });
 

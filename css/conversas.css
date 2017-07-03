@@ -34,6 +34,18 @@
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
+#conversas div.resposta input[type=text]::-webkit-input-placeholder {
+  color: #333333;
+}
+#conversas div.resposta input[type=text]::-moz-placeholder {
+  color: #333333;
+}
+#conversas div.resposta input[type=text]:-ms-input-placeholder {
+  color: #333333;
+}
+#conversas div.resposta input[type=text]:-moz-placeholder {
+  color: #333333;
+}
 @media (max-width: 767px) {
   #conversas div.resposta input[type=text] {
     font-size: 13px;

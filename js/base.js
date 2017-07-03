@@ -7,7 +7,10 @@ $(document).ready(function(){
 
     }, 300, 'easeInQuart', function(){
 
-        StartLogo();
+        window.change(function(){
+            StartLogo();
+        });
+
         $('div#loading').hide();
 
     });
