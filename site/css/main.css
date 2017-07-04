@@ -648,6 +648,9 @@ ul#nav li a {
   -ms-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
 }
+ul#nav li a.robo {
+  color: #c1334f;
+}
 ul#nav li a:hover {
   color: #f1d341;
 }
@@ -1587,8 +1590,8 @@ ul#nav li.current a:after {
 /* Call To Action 
 ------------------------------------------------------------------ */
 #call-to-action {
-  margin-top: 30px;
-  padding-top: 36px;
+  margin: 30px 0;
+  padding: 36px 0;
   text-align: center;
 }
 #call-to-action h2,
@@ -1603,8 +1606,7 @@ ul#nav li.current a:after {
   width: 75%;
 }
 #call-to-action .section-ads {
-  padding-top: 36px;
-  border-top: 1px dotted rgba(150, 150, 150, 0.1);
+  padding: 36px 0;
 }
 #call-to-action h2 {
   font: 30px/36px 'Open Sans', sans-serif;

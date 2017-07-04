@@ -1,6 +1,9 @@
 <?
 include('../includes/autoload.php');
 
+$social_facebook = 'https://www.facebook.com/Ag%C3%AAncia-Vitamina-1919960214886165/';
+$social_twitter = 'http://twitter.com/agvitamina';
+
 SetPageTitle('Home');
 ?><!DOCTYPE html>
 <!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
@@ -61,15 +64,15 @@ SetPageTitle('Home');
 		         <li class="current"><a class="smoothscroll" href="#portfolio">Trabalhos já feitos.</a></li>
 	            <li><a class="smoothscroll" href="#services">Serviços.</a></li>
 	            <li><a class="smoothscroll" href="#about">Sobre nós.</a></li>
+	            <li><a class="smoothscroll robo" href="#robo">Falar com robô.</a></li>
 	            <li><a class="smoothscroll" href="#contact">Contato.</a></li>
 	         </ul> <!-- end #nav -->
 
 	      </nav> <!-- end #nav-wrap -->
 
 	      <ul class="header-social">
-	        	<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-	        	<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-	        	<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+	        	<li><a href="<?= $social_facebook; ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+	        	<li><a href="<?= $social_twitter; ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
 	      </ul>      
 
 	   </div>
@@ -462,9 +465,7 @@ SetPageTitle('Home');
 
 	         <hr />      	         
 
-	         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-	         eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-	         voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+	         <p>Veja abaixo um pouco do que a gente é especialista.
 	         </p>
 
 	      </div>
@@ -477,10 +478,10 @@ SetPageTitle('Home');
 
 	      	<div class="bgrid">	               
 
-	            <h3>Marketing.</h3>
+	            <h3>Marca.</h3>
 
 	            <div class="service-content">	                  
-		            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+		            <p>A marca não é simplesmente o logotipo da sua empresa. Do ponto de vista do consumidor, a ela representa a sua experiência, impressões e sentimentos da sua empresa.
 	         		</p> 
 	         	</div>  
 
@@ -488,10 +489,10 @@ SetPageTitle('Home');
 
 				<div class="bgrid">	              
 
-	            <h3>Videography.</h3>                  
+	            <h3>Mídia Social.</h3>
 
 	            <div class="service-content">	                  
-		            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+		            <p>Tudo o que uma empresa faz dentro do ambiente web está diretamente ligado aos canais de relacionamento digitais.  Assim, cada passo precisa ser medido, avaliado e otimizado.
 	         		</p> 
 	            </div>	              
 
@@ -499,47 +500,52 @@ SetPageTitle('Home');
 
 			   <div class="bgrid">	              
 
-	            <h3>Photography.</h3>
+	            <h3>Sites e Hotsites.</h3>
 
 	            <div class="service-content">		                  
-		            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+		            <p>Um site ou hotsite é a extensão da sua empresa na internet. Ela deve representar tudo o que você sua empresa é. É sua presença em desktops, tablets e smartphones.
 	        			</p> 
 	            </div> 	               
 
 			   </div> <!-- end bgrid -->
 
-				<div class="bgrid">	              
-	                  
-	            <h3>Branding.</h3> 
 
-	            <div class="service-content">	                  
-		            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	         		</p> 
-	            </div>                
 
-				</div> <!-- end bgrid -->
 
-			   <div class="bgrid">
+			  <div class="bgrid">
 
-	            <h3>Web Design.</h3>
+				  <h3>Marketing Digital.</h3>
 
-	            <div class="service-content">	                  
-		            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	        			</p> 
-	            </div>	               
+				  <div class="service-content">
+					  <p>Ações coordenadas a fim de comunicar, promover e vender seus produtos e serviços pela internet.
+					  </p>
+				  </div>
 
-			   </div> <!-- end bgrid -->
+			  </div> <!-- end bgrid -->
 
-			   <div class="bgrid">	               
 
-	            <h3>Web Development.</h3>
+			  <div class="bgrid">
 
-	            <div class="service-content">
-		            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	        			</p> 
-	            </div>	               
+				  <h3>Apps Mobile.</h3>
 
-			   </div> <!-- end bgrid -->
+				  <div class="service-content">
+					  <p>Seja em iOS ou Android, sua marca pode estar próxima de seu público-alvo com soluções personalizadas para smartphones e tablets.
+					  </p>
+				  </div>
+
+			  </div> <!-- end bgrid -->
+
+			  <div class="bgrid">
+
+				  <h3>Otimização de Sites (SEO).</h3>
+
+				  <div class="service-content">
+					  <p>Detectar falhas dentro da estrutura do seu site faz a diferença na hora de exibir seu conteúdo nas buscas orgânicas. Este diagnóstico só é possível quando usamos as ferramentas certas.
+					  </p>
+				  </div>
+
+			  </div> <!-- end bgrid -->
+
 
 	      </div> <!-- end service-list -->	      
 
@@ -560,10 +566,11 @@ SetPageTitle('Home');
 
 	         <hr />     	    
 
-	         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-	         eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-	         voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	         </p>
+	         <p>Somos uma agência de marketing digital, mas um pouco diferente das outras outras.</p>
+
+			<p>Primeiro que aqui é tudo 100% online. Então tudo é feito através do nosso site. Segundo que somos uma agência focada na praticidade. Isso mesmo! Jogamos tudo no liquidificador, batemos e <i>vualá</i>... uma deliciosa vitamina pra sua marca.</p>
+
+			<p>E o melhor de tudo, é mega saudável! Sempre divertida, criativa, mas com muita responsabilidade e profissionalismo.</p>
 
 	      </div> <!-- end section-head -->
 
@@ -575,36 +582,36 @@ SetPageTitle('Home');
 
       		<div class="bgrid">
 
-			      <h3>Our Process.</h3>	
+			      <h3>100% online.</h3>
 
-			      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+			      <p>Somos uma agência focada em trabalhar online não é por acaso. Somos uma agência que nasceu no digital, com uma grande bagagem  de comunicação, desde a época que o “online” nem existia, até hoje. Entendemos que trabalhar assim, 100% digital, online, nos permite fazer coisas que e oferecer diferenciais a nossos clientes que numa agência convencional não seria possível.
 			      </p>
 
 		   	</div>
 
       		<div class="bgrid">
 
-			     	<h3>Our Approach.</h3>
+			     	<h3>Atendimento de primeira.</h3>
 
-			     	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+			     	<p>Aqui a gente não abre mão disso não. Atendimento é prioridade. Tá, ok.. “atendimento” é modo de dizer, queremos mesmo é ter um relacionamento com nossos clientes. Por isso levamos tão a sério o que fazemos. Queremos gerar resultados aos nossos clientes. Resultado! E apesar de sermos 100% digitais, nosso atendimento digital está sempre a sua disposição pra bater um papo com você e te ajudar no que for preciso.
 			   	</p>	
 
 		      </div> 
 
 		      <div class="bgrid">
 
-			     	<h3>Our Goal.</h3>	
+			     	<h3>Precinho camarada.</h3>
 
-			     	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+			     	<p>Do que adiante ser tão diferente se fosse pra ser, também, mais caro, né? Pois então.. a gente além de <i>diferentão</i> é também mais barato do que nossos concorrentes. Estrategicamente nós focamos naquilo que importa e conseguimos oferecer pra você um serviço de qualidade com um precinho camarada, tipo “coisa de irmão”, entende?
 			      </p>
 
 		      </div>
 
 		      <div class="bgrid">
 
-			      <h3>Our Mission.</h3>
+			      <h3>Responsabilidade e Profissionalismo.</h3>
 
-			      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+			      <p>Ok, papo sério agora. Nosso estilo de agência é daquelas divertidas, brincalhonas, mas sempre levando tudo o que nós fazemos com muita seriedade. Temos um compromisso com nossos clientes que com muito profissionalismo. Somos assim, práticos, alegres, mas acima de tudo muito profissionais.
 			      </p>	
 
 		      </div>
@@ -613,7 +620,7 @@ SetPageTitle('Home');
 
      	</div> <!-- end row -->
 
-
+<? /*
       <div class="row team section-head">
 
    		<div class="twelve columns">
@@ -729,36 +736,40 @@ SetPageTitle('Home');
          </div> <!-- end team-wrapper -->
 
       </div> <!-- end row -->
+*/ ?>
 
-      <div id="call-to-action">	       
+   </section> <!-- end about -->
+
+	<section id="robo">
+	<div id="call-to-action">
 
 		   <div class="row section-ads">
 
 		      <div class="twelve columns">		         		
 
-			      <h2><a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">Styleshout Recommends Dreamhost<span>.</span></a></h2>
+			      <h2><a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">Aqui nossa secretária é um Robô. <span>Faça seu pedido</span> com ele.</a></h2>
 
 			      <p>
-			      Looking for an awesome and reliable webhosting? Try <a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT"><span>DreamHost</span></a>.
-					Get <span>$50 off</span> when you sign up with the promocode <span>styleshout</span>. 
-					<!-- Simply type	the promocode in the box labeled “Promo Code” when placing your order. -->					
+					  Somos tão digitais e 100% online que nossa secretária é um robô. Ela ajuda você a fazer seus pedidos.
+					  Conte com ela pro que precisar. Ela é um amor de pessoa.. digo, de robô.
+					  <!-- Simply type	the promocode in the box labeled “Promo Code” when placing your order. -->
 					</p>
 
 					<div class="action">
-			         <a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT" >Sign Up Now</a>
+			         <a href="<?= GetLink('robo'); ?>" >Chamar o robô</a>
 	         	</div>
 
 			   </div>
 
 		   </div> <!-- end section-ads -->		         	         
 
-	   </div> <!-- end call-to-action -->	           
+	   </div> <!-- end call-to-action -->
 
-   </section> <!-- end about -->  
+	</section> <!-- end about -->
 
 
-   <!-- Testimonials Section
-   ================================================== -->
+	<!-- Testimonials Section
+       ================================================== -->
    <section id="testimonials">
 
       <div class="row content flex-container">
@@ -767,16 +778,14 @@ SetPageTitle('Home');
 
             <ul class="slides">
                <li>
-                  <p>Your work is going to fill a large part of your life, and the only way to be truly satisfied is
-                  to do what you believe is great work. And the only way to do great work is to love what you do.
-                  If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it.
-                  </p>
+                  <p>Precisávamos reorganizar a comunicação da nossa empresa e nosso departamento de marketing nos mostrou a Agência Vitamina. No começo ficamos receosos, pois estávamos habituados a trabalhar com as agências convencionais. Hoje, a Vitamina é uma das maiores parceiras da nossa empresa. Foi uma das melhores apostas que fizemos e hoje colhemos bons frutos. Criativa, moderna e sempre bem humorada. Recomendo!
+				  </p>
 
                   <div class="testimonial-author">
-                    	<img src="images/avatars/avatar-1.jpg" alt="Author image">
+                    	<img src="https://scontent.fbfh1-1.fna.fbcdn.net/v/t1.0-9/10322624_707955222597176_7755063321273254507_n.jpg?oh=e8cd4c343027d3f10c0c8801e91a47d9&oe=59CC4BFE" alt="Author image">
                     	<div class="author-info">
-                    		Steve Jobs
-                    		<span class="position">CEO, Apple.</span>
+                    		Bruno Gonçalves
+                    		<span class="position">CEO, Netforce Sistemas.</span>
                     	</div>
                   </div>
              	</li> <!-- end slide -->
@@ -812,7 +821,7 @@ SetPageTitle('Home');
 
    		<div class="twelve columns">
 
-	         <h1>Get In Touch With Us<span>.</span></h1>
+	         <h1>Fale com nossa equipe<span>.</span></h1>
 
 	         <hr />	        
 
@@ -866,21 +875,9 @@ SetPageTitle('Home');
 
          <div class="six columns tab-whole right">
 
-            <p class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+            <p class="lead">Somos uma agência com atendimento exclusivamente digital. Ou seja, você fala com nossa equipe 100% online. Mas fique tranquilo, pois isso dá a você ser atendido a qualquer instante no horário comercial. Temos uma equipe preparada e ansiosa pra falar com você.
 
-	         <h3 class="address">Come Visit</h3>
-
-	         <p>
-            1600 Amphitheatre Parkway<br>
-            Mountain View, CA<br>
-            94043 US
-            </p>
-
-            <h3>Contact Numbers:</h3>
-			   <p>Phone: (000) 555 1212<br>
-			   	Mobile: (000) 555 0100<br>
-			     	Fax: (000) 555 0101
-			   </p>
+			   <p><a href="mailto:falecom@agenciavitamina.com.br">falecom@agenciavitamina.com.br</a></p>
                	
          </div>     	
 
@@ -898,13 +895,8 @@ SetPageTitle('Home');
       	<div class="twelve columns content group">
       		
 				<ul class="social-links">
-               <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-               <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-               <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>               
-               <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
-               <li><a href="#"><i class="fa fa-vimeo-square"></i></a></li>
-               <li><a href="#"><i class="fa fa-flickr"></i></a></li>               
-               <li><a href="#"><i class="fa fa-skype"></i></a></li>
+               <li><a href="<?= $social_facebook; ?>" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+               <li><a href="<?= $social_twitter; ?>" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
             </ul>
 
             <hr />
@@ -913,9 +905,7 @@ SetPageTitle('Home');
 
             	<div class="footer-logo"></div>
 
-	            <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-	            Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
-	            nibh id elit. 
+	            <p>Uma agência digital, 100% online.
 	            </p>	        
 
 	         </div>
@@ -923,8 +913,7 @@ SetPageTitle('Home');
       	</div>           
 
          <ul class="copyright">
-         	<li>&copy; Copyright 2015 KREO.</li> 
-         	<li>Design by <a href="http://www.styleshout.com/">Styleshout.</a>.</li>
+         	<li>&copy; Copyright 2017 agenciavitamina.com.br.</li>
          </ul>
 
          <div id="go-top">
@@ -954,3 +943,12 @@ SetPageTitle('Home');
 </body>
 
 </html>
+
+
+<!-- MoxChat -->
+<script type="text/javascript">
+	!function(t){var e=t.createElement("script");e.type="text/javascript",e.charset="utf-8",
+		e.src="https://static.moxchat.it/visitor-widget-loader/Z72ENYena9.js",e.async=!0;
+		var a=t.getElementsByTagName("script")[0];a.parentNode.insertBefore(e,a);
+	}(document);
+</script>
