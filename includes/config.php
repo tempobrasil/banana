@@ -21,8 +21,8 @@ if(is_localhost()){
 
 } else {
 
-  set_config('SITE_URL'         , 'http://www.zbraestudio.com.br/vitamina/');
-  set_config('SITE_PATH'        , '/dados/http/zbraestudio.com.br/www/vitamina/');
+  set_config('SITE_URL'         , 'http://www.agenciavitamina.com.br/');
+  set_config('SITE_PATH'        , '/dados/http/agenciavitamina.com.br/www/');
 
 }
 
@@ -45,4 +45,4 @@ else
 
 set_config('DB_USER'          , 'root');
 set_config('DB_PASS'          , 'polly');
-set_config('DB_DB'            , 'zbraestudio.com.br_vitamina');
+set_config('DB_DB'            , 'agenciavitamina.com.br_www');
