@@ -811,7 +811,7 @@ ul#nav li.current a:after {
 /* 07. =hero section
 /* =================================================================== */
 #hero {
-  background: #0F1215 url(../images/hero-bg.jpg) no-repeat center;
+  background-color: #0F1215;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;

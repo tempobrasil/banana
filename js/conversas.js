@@ -131,9 +131,9 @@ function pergunta_voltou_nome(){
 function pergunta_1(){
 
     var frase = 'Oie! Tudo bem?<br>'
-    +'Sou o robô da agência Vitamina.'
+    +'Somos uma agência 100% online, então até nossa secretária é digital. Isso mesmo, sou um robô.  =)'
     +'<br><br>'
-    + 'Que bacana que você está por aqui. :)'
+    + 'Que bacana que você está por aqui.'
     +'<br>'
     + 'Qual seu nome?';
 
@@ -172,12 +172,12 @@ function pergunta_2(){
 
 function pergunta_3(){
 
-    var frase = 'Somos uma agência de propaganda diferente.'
+    var frase = 'Somos uma agência digital, mas <i>diferentona</i>.'
     + '<br><br>'
     + 'Primeiro que aqui é tudo 100% online. Então tudo é feito através do nosso site. '
-    + 'Segundo que somos uma agência focada na praticidade. Isso mesmo! Jogamos tudo no liquidificador, batemos e vualá... uma deliciosa vitamina pra sua marca.'
+    + 'Segundo que somos uma agência focada na praticidade. Isso mesmo! Jogamos tudo no liquidificador, batemos e <i>vualá</i>... uma deliciosa vitamina pra sua marca.'
     + '<br><br>'
-    + 'E o melhor de tudo, é mega saudável!  Sempre divertida, criativa, mas com muita responsabilidade e profissionalismo.'
+    + 'E o melhor de tudo, é mega saudável (pra sua marca crescer fortinha, <i>hehe</i>)!  Sempre divertida, criativa, mas com muita responsabilidade e profissionalismo.'
 
     + '<br><br>'
     + 'Antes de continuarmos o papo, conte pra gente seu e-mail:';
@@ -291,7 +291,7 @@ function redireciona_portifolio(){
 
     conversa([frase], 'question', options, function(){
 
-        document.location.href = site_url = 'trabalhos';
+        document.location.href = site_url = 'site/#portfolio';
 
 
     });
@@ -302,14 +302,20 @@ function redireciona_atendimento(){
     var frase = 'Tudo bem! Não é todo mundo que está preparado pra ser amigo de um robô.'
         + '<br><br>:\'('
         + '<br><br>'
-        + 'Vou abrir lá na parte debaixo dessa página, no lado direito, um botão pra você falar com "um humano". '
+        + 'Clique no botão abaixo e redirecionarei você ao nosso "site normal". Lá, utilize o chat para falar com um <i>atendente-humano</i>.'
         + '<br><br>'
         + 'Grande abraço, ' + usuario_nome + '. Até mais! :)';
 
-    conversa([frase], false,[], function(){
+    var options = {
+        index : ['S'],
+        item: ['Falar com um humano']
+    };
 
-        //document.location.href = 'http://www.blog.tiago.art.br';
-        iniciarChat('Não me dou bem com robôs. Prefiro falar com um humano igual a mim. :)');
+    conversa([frase], 'question',options, function(){
+
+        document.location.href = site_url = 'site';
+        //iniciarChat('Não me dou bem com robôs. Prefiro falar com um humano igual a mim. :)');
+
     });
 }
 

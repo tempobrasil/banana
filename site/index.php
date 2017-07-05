@@ -47,7 +47,7 @@ SetPageTitle('Home');
    	<div class="row">
 
 	      <div class="logo">
-	         <a href="index.html">Kreo</a>
+	         <a href="<?= GetLink('site'); ?>">Vitamina</a>
 	      </div>
 
 	      <nav id="nav-wrap">         
@@ -82,7 +82,13 @@ SetPageTitle('Home');
 
    <!-- homepage hero
    ================================================== -->
-   <section id="hero">	
+	<?
+	$diretorio_url = get_config('SITE_URL') . 'site/images/headers/';
+	$diretorio_path = get_config('SITE_PATH') . 'site/images/headers/';
+	$arquivos = glob($diretorio_path . '*.png');
+	shuffle($arquivos);
+	?>
+   <section id="hero" style="background-image: url('<?= $diretorio_url . basename($arquivos[0]); ?>');">
    	  
 		<div class="row hero-content">
 
@@ -130,7 +136,7 @@ SetPageTitle('Home');
 		</div> <!-- end row -->	
 
 		<div id="more">
-		      <a class="smoothscroll" href="#services">Conheça a gente<i class="fa fa-angle-down"></i></a>
+		      <a class="smoothscroll" href="#services">Quem somos nós<i class="fa fa-angle-down"></i></a>
 		</div> 	
 
    </section> <!-- end homepage hero -->
@@ -163,11 +169,11 @@ SetPageTitle('Home');
             <div class="bgrid folio-item">
                <div class="item-wrap">
                   <a href="#modal-01">
-	                  <img src="images/portfolio/underwater.jpg" alt="Underwater">
+	                  <img src="images/portfolio/aline.jpg" alt="Underwater">
                      <div class="overlay"></div>                       
                      <div class="portfolio-item-meta">
-     					      <h5>Underwater</h5>
-                        <p>Videography</p>
+     					      <h5>Marca</h5>
+                        <p>Aline Gonçalves Design de Sobrancelha e Depilação</p>
      					   </div> 
                      <div class="link-icon"><i class="fa fa-plus"></i></div>
                   </a>
@@ -177,11 +183,11 @@ SetPageTitle('Home');
             <div class="bgrid folio-item">
                <div class="item-wrap">
                   <a href="#modal-02">
-                     <img src="images/portfolio/hotel.jpg" alt="Hotel Sign">
+                     <img src="images/portfolio/netforce.jpg" alt="Netforce Sistemas">
                      <div class="overlay">
                       <div class="portfolio-item-meta">
-          					   <h5>Hotel Sign</h5>
-                           <p>Branding</p>
+          					   <h5>Marca</h5>
+                           <p>Netforce Sistemas</p>
           					</div>
                      </div>
                      <div class="link-icon"><i class="fa fa-plus"></i></div>
@@ -192,11 +198,11 @@ SetPageTitle('Home');
             <div class="bgrid folio-item">
                <div class="item-wrap">
                   <a href="#modal-03">
-                     <img src="images/portfolio/beetle.jpg" alt="Beetle">                        
+                     <img src="images/portfolio/maiscafe-livro.jpg" alt="Livro do Blog Mais Café">
                      <div class="overlay">
                       <div class="portfolio-item-meta">
-          					   <h5>Beetle</h5>
-                           <p>Webdesign</p>
+          					   <h5>Editoração de Livro</h5>
+                           <p>Mais Café</p>
           					</div>
                      </div>
                      <div class="link-icon"><i class="fa fa-plus"></i></div>
@@ -207,11 +213,11 @@ SetPageTitle('Home');
             <div class="bgrid folio-item">
                <div class="item-wrap">
                   <a href="#modal-04">
-                     <img src="images/portfolio/banjo-player.jpg" alt="Banjo Player">
+                     <img src="images/portfolio/estacao-site.jpg" alt="Site da Igreja Estação">
                      <div class="overlay">
                       <div class="portfolio-item-meta">
-          					   <h5>Banjo Player</h5>
-                           <p>Photography</p>
+          					   <h5>Site</h5>
+                           <p>Igreja Estação</p>
           					</div>
                      </div>
                      <div class="link-icon"><i class="fa fa-plus"></i></div>
@@ -222,11 +228,11 @@ SetPageTitle('Home');
             <div class="bgrid folio-item">
                <div class="item-wrap">
                   <a href="#modal-05">
-                   <img src="images/portfolio/lighthouse.jpg" alt="Lighthouse">
+                   <img src="images/portfolio/unipraias-site.jpg" alt="Parque Unipraias">
                      <div class="overlay">
                       <div class="portfolio-item-meta">
-          					   <h5>Lighthouse</h5>
-                           <p>Web Development</p>
+          					   <h5>Site e Loja Virtual</h5>
+                           <p>Parque Unipraias</p>
           					</div>
                      </div>
                      <div class="link-icon"><i class="fa fa-plus"></i></div>
@@ -237,11 +243,11 @@ SetPageTitle('Home');
             <div class="bgrid folio-item">
                <div class="item-wrap">
                   <a href="#modal-06">
-                     <img src="images/portfolio/girl.jpg" alt="Girl Stuff">
+                     <img src="images/portfolio/aline-post.jpg" alt="Girl Stuff">
                      <div class="overlay">
                       <div class="portfolio-item-meta">
-          					   <h5>Girl Stuff</h5>
-                           <p>Photography</p>
+          					   <h5>Mídia Social</h5>
+                           <p>Aline Gonçalves Design de Sobrancelhas e Depilação</p>
           					</div>
                      </div>
                      <div class="link-icon"><i class="fa fa-plus"></i></div>
@@ -252,11 +258,11 @@ SetPageTitle('Home');
             <div class="bgrid folio-item">
                <div class="item-wrap">
                   <a href="#modal-07">                        
-                     <img src="images/portfolio/coffee.jpg" alt="Coffee Cup">                       
+                     <img src="images/portfolio/estacao-fanpage.jpg" alt="Coffee Cup">
                      <div class="overlay">
                       <div class="portfolio-item-meta">
-          					   <h5>Coffee Cup</h5>
-                           <p>Branding</p>
+          					   <h5>Mídia Social</h5>
+                           <p>Igreja Estação</p>
           					</div>
                      </div>
                      <div class="link-icon"><i class="fa fa-plus"></i></div>
@@ -267,11 +273,11 @@ SetPageTitle('Home');
             <div class="bgrid folio-item">
                <div class="item-wrap">
                   <a href="#modal-08">
-                     <img src="images/portfolio/judah.jpg" alt="Judah">
+                     <img src="images/portfolio/zbra.jpg" alt="Judah">
                      <div class="overlay">
                       	<div class="portfolio-item-meta">
-        					      <h5>Judah</h5>
-                           <p>Webdesign</p>
+        					      <h5>Branding</h5>
+                           <p>Z.BRA Estúdio</p>
         					   </div>
                      </div>
                      <div class="link-icon"><i class="fa fa-plus"></i></div>                     
@@ -287,18 +293,18 @@ SetPageTitle('Home');
          <div id="modal-01" class="popup-modal mfp-hide">
 
 		      <div class="media">
-	      		<img src="images/portfolio/modals/m-underwater.jpg" alt="Underwater" />
+	      		<img src="images/portfolio/modals/aline.jpg" alt="Underwater" />
 	      	</div>
 
 		      <div class="description-box">
-			      <h4>Underwater</h4>
-			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-               <span class="categories">Videography</span>
+			      <h4>Aline Gonçalves Design de Sobrancelhas e Depilação</h4>
+			      <p>Aceitamos o desafio de desenvolver uma marca que expressasse toda a delicadeza e profissionalismo da Aline.  Nos juntamos a ela na alegria do resultado do trabalho que conseguiu somar ainda mais a excelência do trabalho prestado por ela.</p>
+               <span class="categories">Marca</span>
 		      </div>
 
             <div class="link-box group">
-            	<a href="http://www.behance.net">Details</a>
-            	<a href="#" class="popup-modal-dismiss">Close</a>         
+            	<!--<a href="http://www.behance.net">Details</a>-->
+            	<a href="#" class="popup-modal-dismiss">Fechar</a>
             </div>
 
 	      </div><!-- modal-01 end -->
@@ -306,18 +312,18 @@ SetPageTitle('Home');
          <div id="modal-02" class="popup-modal mfp-hide">
 
 		      <div class="media">
-	      		<img src="images/portfolio/modals/m-hotel.jpg" alt="Hotel Sign" />
+	      		<img src="images/portfolio/modals/netforce.jpg" alt="Hotel Sign" />
 	      	</div>
 
 		      <div class="description-box">
-			      <h4>Hotel Sign</h4>
-			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-               <span class="categories">Branding, Web Development</span>
+			      <h4>Netforce Sistemas</h4>
+			      <p>A Netforce Sistemas é uma empresa que trabalha no nosso universo: digital. E como uma empresa digital, então, sabemos que somos seu parceiro perfeito para cuidar da gestão de comunicação da sua marca. Desde o esboço até o resultado inicial, somos felizes por ter sido os criadores dessa marca.</p>
+               <span class="categories">Marca</span>
 		      </div>
 
             <div class="link-box">            	
-               <a href="http://www.behance.net">Details</a>
-		         <a href="#" class="popup-modal-dismiss">Close</a>
+               <!--<a href="http://www.behance.net">Details</a>-->
+		         <a href="#" class="popup-modal-dismiss">Fechar</a>
             </div>
 
 	      </div><!-- modal-02 end -->
@@ -325,18 +331,18 @@ SetPageTitle('Home');
          <div id="modal-03" class="popup-modal mfp-hide">
 
 		      <div class="media">
-	      		<img src="images/portfolio/modals/m-beetle.jpg" alt="" />
+	      		<img src="images/portfolio/modals/maiscafe-livro.jpg" alt="" />
 	      	</div>
 
 		      <div class="description-box">
-			      <h4>Beetle</h4>
-			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-               <span class="categories">Webdesign</span>
+			      <h4>Livro Mais Café</h4>
+			      <p>O Blog Mais Café lançou um livro de crônicas em comemoração ao seu primeiro aniversário. Fomos privilegiados por ter feito a editoração desse livro. Desde diagramação, editoração até mesmo a programação das versões para plataformas digitais.</p>
+               <span class="categories">Editoração</span>
 		      </div>
 
             <div class="link-box">
-               <a href="http://www.behance.net">Details</a>
-		         <a href="#" class="popup-modal-dismiss">Close</a>
+               <!--<a href="http://www.behance.net">Details</a>-->
+		         <a href="#" class="popup-modal-dismiss">Fechar</a>
             </div>
 
 	      </div><!-- modal-03 end -->
@@ -344,18 +350,18 @@ SetPageTitle('Home');
 			<div id="modal-04" class="popup-modal mfp-hide">
 
 		      <div class="media">
-	      		<img src="images/portfolio/modals/m-banjo-player.jpg" alt="" />
+	      		<img src="images/portfolio/modals/estacao-site.jpg" alt="" />
 	      	</div>
 
 		      <div class="description-box">
-			      <h4>Banjo Player</h4>
-			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-               <span class="categories">Photography</span>
+			      <h4>Igreja Estação</h4>
+			      <p>Como uma igreja bem moderna, a Estação não poderia ter encontrado uma agência melhor. Com muita alegria desenvolvemos o site da igreja, que é atual e moderno.</p>
+               <span class="categories">Site</span>
 		      </div>
 
             <div class="link-box">
-               <a href="http://www.behance.net">Details</a>
-		         <a href="#" class="popup-modal-dismiss">Close</a>
+               <a href="http://www.igrejaestacao.com.br" target="_blank">igrejaestacao.com.br</a>
+		         <a href="#" class="popup-modal-dismiss">Fechar</a>
             </div>
 
 	      </div><!-- modal-04 end -->
@@ -363,21 +369,21 @@ SetPageTitle('Home');
 	      <div id="modal-05" class="popup-modal slider mfp-hide">	
 
 	      	<div class="media">
-	      		<img src="images/portfolio/modals/m-lighthouse.jpg" alt="" />
+	      		<img src="images/portfolio/modals/unipraias-site.jpg" alt="" />
 	      	</div>      	
 
 		      <div class="description-box">
-			      <h4>Lighthouse</h4>		      
+			      <h4>Parque Unipraias</h4>
 
-			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+			      <p>Como um dos maiores Parques Turísticos do estado de Santa Catarina, recebendo meio milhão de turistas de todo o Brasil e também do mundo, contou com a Vitamina para desenvolver seu site institucional e também Loja Virtual.</p>
 
 			      <div class="categories">Web Development</div>
                
 		      </div>
 
             <div class="link-box">
-               <a href="http://www.behance.net">Details</a>
-		         <a href="#" class="popup-modal-dismiss">Close</a>
+               <a href="http://www.unipraias.com.br" target="_blank">unipraias.com.br</a>
+		         <a href="#" class="popup-modal-dismiss">Fechar</a>
             </div>		      
 
 	      </div><!-- modal-05 end -->
@@ -385,15 +391,15 @@ SetPageTitle('Home');
 	      <div id="modal-06" class="popup-modal mfp-hide">
 
 		      <div class="media">
-	      		<img src="images/portfolio/modals/m-girl.jpg" alt="" />
+	      		<img src="images/portfolio/modals/aline-post.jpg" alt="" />
 	      	</div>	
 
 		      <div class="description-box">
-			      <h4>Girl Stuff</h4>			      
+			      <h4>Aline Gonçalves Design de Sobrancelhas e Depilação</h4>
 
-			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+			      <p>As Mídias Sociais de uma empresa, hoje, é a extensão da sua marca no universo digital. É com muita satisfação que gerenciamos os canais de Mídia Social da Aline. Sempre com muito bom humor, utilizando a criatividade para evidenciar a excelência do atendimento e serviço prestado.</p>
 
-			      <div class="categories">Photography</div>
+			      <div class="categories">Mídia Social / Instagram</div>
                
 		      </div>
 
@@ -407,21 +413,21 @@ SetPageTitle('Home');
 	      <div id="modal-07" class="popup-modal mfp-hide">
 
 		      <div class="media">
-	      		<img src="images/portfolio/modals/m-coffee.jpg" alt="" />
+	      		<img src="images/portfolio/modals/estacao-fanpage.jpg" alt="" />
 	      	</div>	
 
 		      <div class="description-box">
-			      <h4>Coffee Cup</h4>			      
+			      <h4>Igreja Estação</h4>
 
-			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+			      <p>Uma igreja <i>diferentona</i> (como dizem), precisa ter uma agência <i>diferentona</i> também. Afinal, a gente se entende. Se identifica. E somos todo carinho ao cuidar das Mídias Sociais da Igreja Estação.</p>
 
-			      <div class="categories">Branding</div>
+			      <div class="categories">Mídia Social / Fanpage</div>
                
 		      </div>
 
             <div class="link-box">
-               <a href="http://www.behance.net">Details</a>
-		         <a href="#" class="popup-modal-dismiss">Close</a>
+               <!--<a href="http://www.behance.net">Details</a>-->
+		         <a href="#" class="popup-modal-dismiss">Fechar</a>
             </div>
 
 	      </div><!-- modal-07 end -->
@@ -429,21 +435,21 @@ SetPageTitle('Home');
 	      <div id="modal-08" class="popup-modal mfp-hide">
 
 		      <div class="media">
-	      		<img src="images/portfolio/modals/m-judah.jpg" alt="" />
+	      		<img src="images/portfolio/modals/zbra.jpg" alt="" />
 	      	</div>	
 
 		      <div class="description-box">
-			      <h4>Judah</h4>			      
+			      <h4>Z.BRA Estúdio</h4>
 
-			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+			      <p>Eles são mestres na criação de Apps Mobile e Games. Um dos nossos parceiros mais antigos, a Z.BRA deixa a parte criativa por nossa conta. </p>
 
-			      <div class="categories">Webdesign</div>
+			      <div class="categories">Marca</div>
                
 		      </div>
 
             <div class="link-box">
-               <a href="http://www.behance.net">Details</a>
-		         <a href="#" class="popup-modal-dismiss">Close</a>
+               <a href="http://www.zbraestudio.com.br" target="_blank">zbraestudio.com.br</a>
+		         <a href="#" class="popup-modal-dismiss">Fechar</a>
             </div>
 
 	      </div><!-- modal-08 end -->
@@ -789,7 +795,7 @@ SetPageTitle('Home');
                     	</div>
                   </div>
              	</li> <!-- end slide -->
-
+<!--
                <li>                       
                   <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
                   Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
@@ -802,7 +808,7 @@ SetPageTitle('Home');
                     		<span>CEO, ABC Corp.</span>
                     	</div>
                   </div>                        
-               </li> <!-- end slide -->
+               </li>--> <!-- end slide -->
 
             </ul> <!-- end slides -->
 
@@ -952,3 +958,24 @@ SetPageTitle('Home');
 		var a=t.getElementsByTagName("script")[0];a.parentNode.insertBefore(e,a);
 	}(document);
 </script>
+
+
+<?
+if(!is_localhost()) {
+	?>
+	<!-- Google Analytics (início) -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-101933054-1', 'auto');
+		ga('send', 'pageview');
+
+	</script>
+	<!-- Google Analytics (fim) -->
+
+<?
+}
+?>
