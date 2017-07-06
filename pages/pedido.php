@@ -36,7 +36,7 @@ includeHeader();
 
                             <strong>Pedido cancelado!</strong><br><br>
                             Por algum motivo esse pedido foi cancelado por nossa equipe. Caso você não saiba o motivo, entre em contato com nossa equipe através do chat ou através do e-mail
-                            <a href="mailto:vitamina@zbraestudio.com.br">vitamina@zbraestudio.com.br</a>.
+                            <a href="mailto:atendimento@agenciavitamina.com.br">atendimento@agenciavitamina.com.br</a>.
 
                         </div>
                     <?
@@ -260,7 +260,7 @@ includeHeader();
                         <p style="margin-top: 25px;">
                             Utilize nosso chat para falar com um atendente e resolver qualquer assunto que achar
                             necessário. Nossos atendentes estão sempre disponíveis no horário comercial.
-                            Caso prefira, escreva para <a href="mailto:suporte@zbraestudio.com.br">suporte@zbraestudio.com.br</a>.
+                            Caso prefira, escreva para <a href="mailto:atendimento@agenciavitamina.com.br?subject=Quero atendimento para o pedido #<?= $pedidoNr; ?>">atendimento@agenciavitamina.com.br</a>.
                         </p>
 
                     <?

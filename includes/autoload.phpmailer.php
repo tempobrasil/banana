@@ -15,7 +15,7 @@ $mailer->Port =             465;
 
 $mailer->CharSet = "UTF-8";
 $mailer->addEmbeddedImage(dirname(dirname(__FILE__)) . '/mails/templates/images/logo.png', 'logo');
-$mailer->setFrom('vitamina@zbraestudio.com.br', 'Agência Vitamina');
-$mailer->addReplyTo('vitamina@zbraestudio.com.br');
+$mailer->setFrom('atendimento@agenciavitamina.com.br', 'Agência Vitamina');
+$mailer->addReplyTo('atendimento@agenciavitamina.com.br');
 $mailer->isHTML(true);
 ?>
