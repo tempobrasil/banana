@@ -5,6 +5,9 @@
     <title><?= GetPageTitle(); ?></title>
     <link rel="stylesheet" href="<?= get_config('SITE_URL'); ?>css/reset.css">
 
+	<link rel="shortcut icon" href="<?= get_config('SITE_URL'); ?>favicon.png" >
+
+
     <!-- BOWER - jQuery -->
     <script src="<?= get_config('SITE_URL'); ?>bower_components/jquery/dist/jquery.min.js"></script>
     <script src="<?= get_config('SITE_URL'); ?>bower_components/jquery.easing/js/jquery.easing.min.js"></script>
