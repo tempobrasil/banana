@@ -213,7 +213,7 @@ includeHeader();
 
 
                             </div>
-                            <a href="#" target="_blank" title="Clique aqui para visualizar sua proposta"
+                            <a href="<?= $pedido->LinkProposta; ?>" target="_blank" title="Clique aqui para visualizar sua proposta"
                                class="btn btn-primary"><span class="glyphicon glyphicon-search"
                                                              aria-hidden="true"></span> Ver Proposta</a>
 
